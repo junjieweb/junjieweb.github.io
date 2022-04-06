@@ -1,1 +1,0 @@
-const e={key:"v-d13d2106",path:"/notes/css.html",title:"CSS",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u7B80\u4ECB",slug:"\u7B80\u4ECB",children:[]},{level:2,title:"\u9009\u62E9\u5668",slug:"\u9009\u62E9\u5668",children:[]},{level:2,title:"\u76D2\u6A21\u578B",slug:"\u76D2\u6A21\u578B",children:[]}],git:{},filePathRelative:"notes/css.md"};export{e as data};

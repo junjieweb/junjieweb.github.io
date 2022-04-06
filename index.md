@@ -25,5 +25,3 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ``` -->
-[html笔记](https://github.com/junjieweb/webcode/blob/master/00_Summarize/01_html/HTML.md)
-[css笔记](https://github.com/junjieweb/webcode/blob/master/00_Summarize/02_css/CSS.md)

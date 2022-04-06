@@ -1,0 +1,261 @@
+<template><h1 id="css" tabindex="-1"><a class="header-anchor" href="#css" aria-hidden="true">#</a> CSS</h1>
+<h2 id="简介" tabindex="-1"><a class="header-anchor" href="#简介" aria-hidden="true">#</a> 简介</h2>
+<p><strong>层叠样式表</strong> (Cascading Style Sheets，缩写为 <strong>CSS</strong>），是一种 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/StyleSheet" target="_blank" rel="noopener noreferrer">样式表<ExternalLinkIcon/></a> 语言，用来描述 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML<ExternalLinkIcon/></a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/XML/XML_Introduction" target="_blank" rel="noopener noreferrer">XML<ExternalLinkIcon/></a>（包括如 <a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG" target="_blank" rel="noopener noreferrer">SVG<ExternalLinkIcon/></a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML<ExternalLinkIcon/></a>、<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/XHTML" target="_blank" rel="noopener noreferrer">XHTML<ExternalLinkIcon/></a> 之类的 XML 分支语言）文档的呈现。CSS 描述了在屏幕、纸质、音频等其它媒体上的元素应该如何被渲染的问题。</p>
+<p>CSS 是<strong>开放网络</strong>的核心语言之一，由 <a href="https://w3.org/Style/CSS/#specs" target="_blank" rel="noopener noreferrer">W3C 规范<ExternalLinkIcon/></a> 实现跨浏览器的标准化。CSS节省了大量的工作。 样式可以通过定义保存在外部.css文件中，同时控制多个网页的布局，这意味着开发者不必经历在所有网页上编辑布局的麻烦。CSS 被分为不同等级：CSS1 现已废弃， CSS2.1 是推荐标准， <a href="https://developer.mozilla.org/zh-CN/docs/CSS/CSS3" target="_blank" rel="noopener noreferrer">CSS3<ExternalLinkIcon/></a> 分成多个小模块且正在标准化中。</p>
+<p><strong>编写的位置</strong></p>
+<ol>
+<li>
+<p>第一种：内联样式：可将css代码编写到标签的style属性中</p>
+<ul>
+<li><code>&lt;p style=&quot;color: red; font-size: 30px;&quot;&gt;海内存知己，天涯若比邻！&lt;/p&gt;</code></li>
+</ul>
+</li>
+<li>
+<p>第二种：内部样式表：可以将css代码编写到一个style标签中</p>
+<div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">p</span> <span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div></li>
+<li>
+<p>第三种：外部样式表：可以将css代码编写到一个外部文件中，然后通过link标签引入</p>
+<p><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./style.css&quot;&gt;</code></p>
+</li>
+</ol>
+<p><strong>CSS 语法</strong></p>
+<p>CSS是一门基于规则的语言 —— 你能定义用于你的网页中特定元素样式的一组规则. 比如“我希望页面中的主标题是红色的大字”</p>
+<p>下面这段代码使用非常简单的 CSS 规则实现了之前提到的效果:</p>
+<div class="language-css ext-css line-numbers-mode"><pre v-pre class="language-css"><code><span class="token selector">h1</span> <span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 5em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>语法由一个 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/CSS_Selector" target="_blank" rel="noopener noreferrer">选择器(selector)<ExternalLinkIcon/></a>起头。 它 <em>选择(selects)</em> 了我们将要用来添加样式的 HTML 元素。 在这个例子中我们为一级标题（主标题<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements" target="_blank" rel="noopener noreferrer">`` (en-US)<ExternalLinkIcon/></a>）添加样式。</p>
+<p>接着输入一对大括号<code>{ }</code>。 在大括号内部定义一个或多个形式为 <strong>属性(property):值(value);</strong> 的 <strong>声明(declarations)</strong>。每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。</p>
+<p>冒号之前是属性，冒号之后是值。不同的 CSS <a href="https://developer.mozilla.org/en-US/docs/Glossary/property/CSS" target="_blank" rel="noopener noreferrer">属性(properties) (en-US)<ExternalLinkIcon/></a> 对应不同的合法值。在这个例子中，我们指定了 <code>color</code> 属性，它可以接受许多<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#color" target="_blank" rel="noopener noreferrer">颜色值<ExternalLinkIcon/></a>；还有 <code>font-size</code> 属性，它可以接收许多 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages" target="_blank" rel="noopener noreferrer">size units<ExternalLinkIcon/></a> 值。</p>
+<h2 id="选择器" tabindex="-1"><a class="header-anchor" href="#选择器" aria-hidden="true">#</a> 选择器</h2>
+<p>CSS选择器是CSS规则的第一部分。它是元素和其他部分组合起来告诉浏览器哪个HTML元素应当是被选为应用规则中的CSS属性值的方式。选择器所选择的元素，叫做“选择器的对象”。</p>
+<p><strong>常用选择器</strong></p>
+<ul>
+<li>元素选择器：根据标签名来选中指定的元素 <code>p{}</code></li>
+<li>id选择器：根据元素的id属性值选中一个元素 <code>#myid{}</code></li>
+<li>类选择器：根据元素的class属性选中一组元素 <code>.myclass{}</code></li>
+<li>通配选择器：选中页面中的所有元素 <code>*{}</code></li>
+</ul>
+<p><strong>复合选择器</strong></p>
+<ul>
+<li>交集选择器：选中同时符合多个条件的元素
+<ul>
+<li>语法：选择器1选择器2选择器n{}</li>
+<li>注意：交集选择器中如果有元素选择器，必须使用元素选择器开头</li>
+</ul>
+</li>
+<li>选择器分组（并集选择器）：同时选择多个选择器对应的元素
+<ul>
+<li>语法：选择器1,选择器2,选择器n{}</li>
+<li><code>#myid,.p,h1,span,div.myclass{}</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>关系选择器</strong></p>
+<ul>
+<li>父元素：直接包含子元素的元素叫做父元素</li>
+<li>子元素：直接被父元素包含的元素是子元素</li>
+<li>祖先元素：直接或间接包含后代的元素叫做祖先元素，一个元素的父元素也是它的祖先元素</li>
+<li>后代元素：直接或间接被祖先元素包含的元素叫做后代元素，子元素也是后代元素</li>
+<li>兄弟元素：拥有相同父元素的元素是兄弟元素</li>
+<li>子元素选择器：选中指定父元素的指定子元素 <code>父元素 &gt; 子元素{}</code></li>
+<li>后代元素选择器：选中指定元素内的指定后代元素 <code>祖先 后代{}</code></li>
+<li>选择下一个兄弟 <code>前一个 + 下一个{}</code></li>
+<li>选择下边所有的兄弟 <code>兄 ~ 弟{}</code></li>
+</ul>
+<p><strong>属性选择器</strong></p>
+<ul>
+<li>根据元素的属性来获取元素
+<ul>
+<li>[属性名] 选择含有指定属性的元素</li>
+<li>[属性名 = 属性值] 选择含有指定属性和属性值的元素</li>
+<li>[属性名 ^= 属性值] 选择属性值以指定值开头的元素</li>
+<li>[属性名 $= 属性值] 选择属性值以指定值结尾的元素</li>
+<li>[属性名 *= 属性值] 选择属性值中含有某值的元素的元素</li>
+</ul>
+</li>
+</ul>
+<p><strong>伪类选择器</strong></p>
+<ul>
+<li>伪类（不存在的类，特殊的类）</li>
+<li>伪类用来描述一个元素的特殊状态</li>
+<li>比如：第一个子元素、被点击的元素、鼠标移入的元素</li>
+<li>伪类一般情况下都是使用:开头
+<ul>
+<li>:first-child 第一个子元素</li>
+<li>:first-of-type      同类型的第一个子元素</li>
+<li>:last-child 最后一个子元素</li>
+<li>:last-of-type      同类型的最后一个子元素</li>
+<li>:nth-child(n) 选中第n个子元素</li>
+<li>:nth-of-type(n)      同类型的第N个子元素</li>
+<li>:only-child 唯一的子元素</li>
+<li>:only-of-type      同类型中唯一的子元素</li>
+<li>:empty 空元素</li>
+<li>:not() 除了</li>
+<li>:link      正常的链接（没访问过的链接）</li>
+<li>:visited 访问过的链接</li>
+<li>:hover 鼠标移入的状态</li>
+<li>:active 鼠标点击的状态</li>
+</ul>
+</li>
+</ul>
+<p><strong>伪元素选择器</strong></p>
+<ul>
+<li>伪元素，表示页面中一些特殊的并不真实存在的元素（特殊的位置）</li>
+<li>伪元素使用 :: 开头
+<ul>
+<li>::before 元素内部的开始位置</li>
+<li>::after 元素内部的结束位置</li>
+<li>::selection 选中的内容</li>
+<li>::first-letter 第一个字母（汉字）</li>
+<li>::first-line 第一行</li>
+</ul>
+</li>
+</ul>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">选择器</th>
+   <th scope="col">示例</th>
+   <th scope="col">学习CSS的教程</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Type_selectors">类型选择器</a></td>
+   <td><code>h1 {&nbsp; }</code></td>
+   <td><a href="/zh-CN/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Type_selectors" class="page-not-created" title="This is a link to an unwritten page">类型选择器</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Universal_selectors">通配选择器</a></td>
+   <td><code>* {&nbsp; }</code></td>
+   <td><a href="/zh-CN/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#The_universal_selector" class="page-not-created" title="This is a link to an unwritten page">通配选择器</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Class_selectors">类选择器</a></td>
+   <td><code>.box {&nbsp; }</code></td>
+   <td><a href="/zh-CN/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#Class_selectors">类选择器</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/ID_selectors">ID选择器</a></td>
+   <td><code>#unique { }</code></td>
+   <td><a href="/zh-CN/docs/user:chrisdavidmills/CSS_Learn/CSS_Selectors/Type_Class_and_ID_Selectors#ID_Selectors">ID选择器</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Attribute_selectors">标签属性选择器</a></td>
+   <td><code>a[title] {&nbsp; }</code></td>
+   <td><a href="/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Attribute_selectors">标签属性选择器</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Pseudo-classes">伪类选择器</a></td>
+   <td><code>p:first-child { }</code></td>
+   <td><a href="/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-class">伪类</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Pseudo-elements">伪元素选择器</a></td>
+   <td><code>p::first-line { }</code></td>
+   <td><a href="/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Pseuso-classes_and_Pseudo-elements#What_is_a_pseudo-element">伪元素</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Descendant_combinator">后代选择器</a></td>
+   <td><code>article p</code></td>
+   <td><a href="/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Descendant_Selector">后代运算符</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Child_combinator">子代选择器</a></td>
+   <td><code>article &gt; p</code></td>
+   <td><a href="/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Child_combinator">子代选择器</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator">相邻兄弟选择器</a></td>
+   <td><code>h1 + p</code></td>
+   <td><a href="/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#Adjacent_sibling">相邻兄弟</a></td>
+  </tr>
+  <tr>
+   <td><a href="/zh-CN/docs/Web/CSS/General_sibling_combinator">通用兄弟选择器</a></td>
+   <td><code>h1 ~ p</code></td>
+   <td><a href="/zh-CN/docs/User:chrisdavidmills/CSS_Learn/CSS_Selectors/Combinators#General_sibling">通用兄弟</a></td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>选择器优先级</strong></p>
+<ul>
+<li>当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值时，此时就发生了样式的冲突。</li>
+<li>发生样式冲突时，应用哪个样式由选择器的权重（优先级）决定</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>内联样式/行内样式</th>
+<th>1，0，0，0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id选择器</td>
+<td>0，1，0，0</td>
+</tr>
+<tr>
+<td>类和伪类选择器</td>
+<td>0，0，1，0</td>
+</tr>
+<tr>
+<td>元素选择器</td>
+<td>0，0，0，1</td>
+</tr>
+<tr>
+<td>通配选择器</td>
+<td>0，0，0，0</td>
+</tr>
+<tr>
+<td>继承的样式</td>
+<td>没有优先级</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>比较优先级时，需要将所有的选择器的优先级相加计算，最后优先级越高，则越优先显示（分组选择器是单独计算的）</p>
+</li>
+<li>
+<ul>
+<li>选择器的累加不会超过其最大的数量级，类选择器在高也不会超过id选择器</li>
+<li>如果优先级计算后相等，此时则优先使用靠下的样式</li>
+</ul>
+</li>
+<li>
+<p>可以在某一个样式的后面添加 <strong>!important</strong>，则此时该样式会获取到最高的优先级，甚至超过内联样式</p>
+</li>
+</ul>
+<p>注意：在开发中这个一定要慎用</p>
+<p>https://specifishity.com/</p>
+<p><img src="/images/css/specifishity.png" alt="specifishity"></p>
+<h2 id="盒模型" tabindex="-1"><a class="header-anchor" href="#盒模型" aria-hidden="true">#</a> 盒模型</h2>
+<p>在 CSS 中，所有的元素都被一个个的“盒子（box）”包围着，理解这些“盒子”的基本原理，是我们使用CSS实现准确布局、处理元素排列的关键。</p>
+<p>在 CSS 中我们广泛地使用两种“盒子” —— <strong>块级盒子</strong> (<strong>block box</strong>) 和 <strong>内联盒子</strong> (<strong>inline box</strong>)<strong>。<strong>这两种盒子会在</strong>页面流</strong>（page flow）和<strong>元素之间的关系</strong>方面表现出不同的行为:</p>
+<p>一个被定义成块级的（block）盒子会表现出以下行为:</p>
+<ul>
+<li>盒子会在内联的方向上扩展并占据父容器在该方向上的所有可用空间，在绝大数情况下意味着盒子会和父容器一样宽</li>
+<li>每个盒子都会换行</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width" target="_blank" rel="noopener noreferrer"><code>width</code><ExternalLinkIcon/></a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/height" target="_blank" rel="noopener noreferrer"><code>height</code><ExternalLinkIcon/></a> 属性可以发挥作用</li>
+<li>内边距（padding）, 外边距（margin） 和 边框（border） 会将其他元素从当前盒子周围“推开”</li>
+</ul>
+<p>除非特殊指定，诸如标题(<code>&lt;h1&gt;</code>等)和段落(<code>&lt;p&gt;</code>)默认情况下都是块级的盒子。</p>
+<p>如果一个盒子对外显示为 <code>inline</code>，那么他的行为如下:</p>
+<ul>
+<li>盒子不会产生换行。</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/width" target="_blank" rel="noopener noreferrer"><code>width</code><ExternalLinkIcon/></a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/height" target="_blank" rel="noopener noreferrer"><code>height</code><ExternalLinkIcon/></a> 属性将不起作用。</li>
+<li>垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 <code>inline</code> 状态的盒子推开。</li>
+<li>水平方向的内边距、外边距以及边框会被应用且会把其他处于 <code>inline</code> 状态的盒子推开。</li>
+</ul>
+<p>用做链接的 <code>&lt;a&gt;</code> 元素、 <code>&lt;span&gt;</code>、 <code>&lt;em&gt;</code> 以及 <code>&lt;strong&gt;</code> 都是默认处于 <code>inline</code> 状态的。</p>
+<p>我们通过对盒子<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/display" target="_blank" rel="noopener noreferrer"><code>display</code><ExternalLinkIcon/></a> 属性的设置，比如 <code>inline</code> 或者 <code>block</code> ，来控制盒子的外部显示类型。</p>
+</template>
