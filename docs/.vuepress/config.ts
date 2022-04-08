@@ -7,7 +7,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     lang: 'zh-CN',
     title: 'Junjie',
     description: 'Front-end developer',
-    dest:'dist',
+    dest:'docs/dist',
 
     // 主题和它的配置
     theme: '@vuepress/theme-default',
