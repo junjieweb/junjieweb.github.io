@@ -1,0 +1,1 @@
+var s="/assets/Vue.js_Logo_2.606c4449.svg",a="/assets/Octicons-mark-github.12794390.svg",_="/assets/MDN_Web_Docs_logo.6746fa14.svg",o="/assets/WebStorm_icon.69c9ca08.svg",t="/assets/Visual_Studio_Code_logo.4c4dd46c.svg";export{s as _,a,_ as b,o as c,t as d};
