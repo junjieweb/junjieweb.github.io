@@ -60,8 +60,6 @@ JavaScript 加载于欲操作的 HTML 元素之前，则代码将出错。
 
 - 如果脚本需要等待页面解析，且依赖于其它脚本，调用这些脚本时应使用 `defer`，将关联的脚本按所需顺序置于 HTML 中。
 
-![deferAndAsync](../../.vuepress/public/images/html/deferAndAsync.png)
-
 如果没有 `defer` 或 `async` 属性，浏览器会立即加载并执行相应的脚本。它不会等待后续加载的文档元素，读取到就会开始加载和执行，这样就阻塞了后续文档的加载。
 
 使用 `defer` 和 `async` 都会使得解析HTML的同时进行js脚本的异步下载，不会阻碍文档的解析，区别是
