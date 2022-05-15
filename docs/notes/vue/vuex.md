@@ -16,7 +16,7 @@
    //引入Vue核心库
    import Vue from 'vue'
    //引入Vuex
-   import Vuex from 'vuex'
+   import Vuex from 'docs/notes/vue/vuex'
    //应用Vuex插件
    Vue.use(Vuex)
    
@@ -57,7 +57,7 @@
    //引入Vue核心库
    import Vue from 'vue'
    //引入Vuex
-   import Vuex from 'vuex'
+   import Vuex from 'docs/notes/vue/vuex'
    //引用Vuex
    Vue.use(Vuex)
    

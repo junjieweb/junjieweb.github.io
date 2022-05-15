@@ -1,3 +1,6 @@
+---
+sidebar_position: 11
+---
 # ES6 新特性
 
 **`ECMAScript`** 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。

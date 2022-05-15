@@ -1,4 +1,7 @@
-# Array 数组
+---
+sidebar_position: 4
+title: Array 数组
+---
 
 **JavaScript**的 `Array` 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
 

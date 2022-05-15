@@ -1,3 +1,6 @@
+---
+sidebar_position: 7
+---
 # DOM
 
 **文档对象模型**

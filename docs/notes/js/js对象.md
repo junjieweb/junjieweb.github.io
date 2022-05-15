@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Object 对象
 
 JavaScript 的设计是一个简单的基于对象的范式。一个对象就是一系列属性的集合，一个属性包含一个名和一个值。一个属性的值可以是函数，这种情况下属性也被称为方法。除了浏览器里面预定义的那些对象之外，你也可以定义你自己的对象。
@@ -302,6 +306,55 @@ JS会提升var声明的变量和函数，移动到当前作用域的开头
 1. 创建一个对象`new Object()`
 2. 原型赋值（指向同一个原型对象）：`对象.__proto__ = Fun.prototype`
 3. 改变this指向：`Fun.call(obj)`
+
+### 深拷贝和浅拷贝
+
+什么是拷贝？复制
+
+> 基本类型是按照值访问的
+
+> 引用类型都是按照引用传递的
+
+#### 浅拷贝
+
+只复制一层对象，当对象的属性是引用类型时，实质上复制的是其引用，当引用指向的值方式变化的时候，原对象的属性值也会跟着变化，互相影响
+
+`Object.assign(target, ...sources)`target目标对象，sources元对象，返回目标对象
+
+#### 深拷贝
+
+在拷贝的时候创建新的对象，并把原对象所有的属性都拷贝到新对象，原属性如果是对象，也会重新创建新的对象并拷贝到新对象属性中，原对象和新对象都是相互独立的，互不影响
+
+方式一：`let newObj = JSON.parse(JSON.stringify(obj))`
+
+方式二：递归
+
+```javascript
+let obj = {
+    a: 10,
+    b: {
+        c: 20
+    }
+}
+
+function deepCopy(obj) {
+    let o = {}
+    if (typeof obj === 'object') {
+        for (let k in obj) {
+            if (obj.hasOwnProperty(k)) {
+                if (typeof obj[k] === 'object') {
+                    o[k] = deepCopy(obj[k])
+                } else {
+                    o[k] = obj[k]
+                }
+            }
+        }
+    }
+    return o
+}
+
+let newObj = deepCopy(obj)
+```
 
 ## ES6
 

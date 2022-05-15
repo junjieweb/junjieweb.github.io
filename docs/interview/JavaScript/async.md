@@ -20,7 +20,7 @@ JS是单线程，也就是说，同一时间只能做一件事。同步和异步
 
 详细的事件循环图示如下（顺序是从上到下，即：首先是脚本，然后是微任务，渲染等）：
 
-<img src="https://zh.javascript.info/article/event-loop/eventLoop-full.svg">
+![](https://zh.javascript.info/article/event-loop/eventLoop-full.svg)
 
 **更详细的事件循环算法**
 

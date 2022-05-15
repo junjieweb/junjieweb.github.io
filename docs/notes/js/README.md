@@ -1,4 +1,7 @@
-# 简介
+---
+sidebar_position: 1
+title: 简介
+---
 
 ## 什么是 JavaScript?
 
@@ -68,4 +71,4 @@ ECMAScript 6 或者 ES6。自此，ECMAScript 每年发布一次新标准。
 2. 控制台打印：`console.log('Hello World');`
 3. 网页中打印：`document.write('Hello World');`
 4. 显示信息等待用户点击确定或取消：
-   - `result = confirm(question);`点击确定返回 `true`，点击取消返回 `false`。
+    - `result = confirm(question);`点击确定返回 `true`，点击取消返回 `false`。

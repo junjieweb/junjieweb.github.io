@@ -1,4 +1,7 @@
-# Function 函数
+---
+sidebar_position: 3
+title: Function 函数
+---
 
 函数是 JavaScript 中的基本构建块之一。 JavaScript
 中的函数类似于过程——一组执行任务或计算值的语句，但要使过程符合函数的条件，它应该接受一些输入并返回一个输出，其中两者之间有一些明显的关系。输入和输出。要使用函数，您必须在要调用它的范围内的某个地方定义它。
@@ -249,13 +252,12 @@ this指的是函数运行时所在的“环境”。
 必须有结束条件，没有结束条件就变成死循环
 :::
 
-
 ```javascript
-function sun(n){
-    if(n === 1){ // 结束条件
+function sun(n) {
+    if (n === 1) { // 结束条件
         return 1
-    }else {
-        return n + sum(n-1)
+    } else {
+        return n + sum(n - 1)
     }
 }
 ```
@@ -263,12 +265,12 @@ function sun(n){
 **数组扁平化**：把多维数组变成一维数组
 
 ```javascript
-function fn(arr){
+function fn(arr) {
     let result = []
-    for(let i = 0; i < arr.length; i++){
-        if(typeof arr[i] === 'object'){
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'object') {
             result = result.concat(fn(arr[i]))
-        }else {
+        } else {
             result.push(arr[i])
         }
     }
@@ -279,8 +281,8 @@ function fn(arr){
 **斐波那契数列**：`1 1 2 3 5 8 13 21 34 55 ...`
 
 ```javascript
-function fn(n){
-    if(n < 3){
+function fn(n) {
+    if (n < 3) {
         return 1
     }
     return fn(n - 1) + fn(n - 2)

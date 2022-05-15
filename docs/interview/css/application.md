@@ -96,7 +96,7 @@ none;字体大小就不受限制了。但是chrome更新到27版本之后就不�
 
 **原因**
 
-- window.devicePixelRatio = 设备的物理像素 / CSS像素。
+- `window.devicePixelRatio` = 设备的物理像素 / CSS像素。
 - 打开 Chrome 浏览器，启动移动端调试模式，在控制台去输出这个 devicePixelRatio 的值。这里选中 iPhone6/7/8 这系列的机型，输出的结果就是2：
 - 这就意味着设置的 1px CSS 像素，在这个设备上实际会用 2 个物理像素单元来进行渲染，所以实际看到的一定会比 1px 粗一些。
 
@@ -115,7 +115,7 @@ none;字体大小就不受限制了。但是chrome更新到27版本之后就不�
 
 - 思路三：viewport 缩放来解决
 
-    - <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    - `<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">`
 
     - 整个页面被缩放了。这时 1px 已经被处理成物理像素大小，这样的大小在手机上显示边框很合适。但是，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。
 

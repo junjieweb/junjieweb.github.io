@@ -1,4 +1,7 @@
-# JavaScript 基础
+---
+sidebar_position: 2
+title: JavaScript 基础
+---
 
 ## 数据类型
 

@@ -1,0 +1,8 @@
+{
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  // 该文件不用于编译。它在这里只是为了获得良好的编辑体验。
+  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "."
+  }
+}
