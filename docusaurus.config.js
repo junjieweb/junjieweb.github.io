@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Junjie',
-    tagline: 'Embraces Open Source',
+    tagline: 'Front-end Web Developer',
     url: 'https://your-docusaurus-test-site.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
@@ -89,9 +89,9 @@ const config = {
                         type: 'doc',
                         docId: 'web',
                         position: 'left',
-                        label: 'Docs',
+                        label: '📒Docs',
                     },
-                    {to: '/blog', label: 'Blog', position: 'left'},
+                    {to: '/blog', label: '📑Blog', position: 'left'},
                     {
                         href: 'https://docusaurus.io/zh-CN/',
                         label: 'Docusaurus',

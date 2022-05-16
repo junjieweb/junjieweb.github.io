@@ -33,3 +33,6 @@ Dribbble 是设计师获得灵感、反馈和工作的地方，是你发现和�
 
 ## [Freepik](https://www.freepik.com)
 下载高质量的图片，有各种素材图，并且提供的格式丰富，如PSD、SVG、AI、ESP等。
+
+## [EmojiAll](https://www.emojiall.com/zh-hans)
+一个方便的EMOJI复制和粘贴工具
