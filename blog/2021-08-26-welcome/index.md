@@ -5,6 +5,20 @@ authors: [junjie]
 tags: [facebook, hello, docusaurus]
 ---
 
+博客文章支持 [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), 如 [MDX](https://mdxjs.com/).
+
+:::tip
+
+使用 React 的强大功能创建交互式博客文章。
+
+```js
+<button onClick={() => alert('button clicked!')}>Click me!</button>
+```
+
+<button onClick={() => alert('button clicked!')}>Click me!</button>
+
+:::
+
 [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
 
 Simply add Markdown files (or folders) to the `blog` directory.
