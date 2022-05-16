@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-// 注意：类型注释允许类型检查和 IDE 自动完成
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -9,24 +8,23 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
     title: 'Junjie',
     tagline: 'Embraces Open Source',
-    url: 'https://junjieweb.github.io/',
+    url: 'https://your-docusaurus-test-site.com',
     baseUrl: '/',
-    favicon: '/img/favicon.ico',
-
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
+    favicon: 'img/favicon.ico',
 
-    trailingSlash: false,
+    // GitHub pages deployment config.
+    // If you aren't using GitHub pages, you don't need these.
+    organizationName: 'junjieweb', // Usually your GitHub org/user name.
+    projectName: 'docusaurus', // Usually your repo name.
 
-    organizationName: 'junjieweb',
-    projectName: 'junjieweb.github.io',
-    deploymentBranch: 'gh-pages',
-    githubHost: 'github.com',
-    // githubPort: '22',
-
+    // Even if you don't use internalization, you can use this field to set useful
+    // metadata like html lang. For example, if your site is Chinese, you may want
+    // to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: 'zh-CN',
-        locales: ['zh-CN'],
+        locales: ['zh-CN','en'],
     },
 
     presets: [
@@ -35,21 +33,22 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
+                    path:'docs',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
-                    // 请将此更改为您的存储库。
                     // Remove this to remove the "edit this page" links.
-                    // 删除它以删除“编辑此页面”链接。
                     editUrl:
-                        'https://github.com/junjieweb/junjieweb.github.io',
+                        'https://github.com/junjieweb/junjieweb.github.io/',
                 },
                 blog: {
-                    // blogTitle: 'Junjie 博客！',
-                    blogDescription: '这是个用 Docusaurus 搭建的博客！',
-                    postsPerPage: 'ALL',
                     showReadingTime: true,
-                    blogSidebarTitle: '全部博文',
+                    postsPerPage: 5,
                     blogSidebarCount: 'ALL',
+                    blogSidebarTitle: 'All our posts',
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                    editUrl:
+                        'https://github.com/junjieweb/junjieweb.github.io/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -61,12 +60,29 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            liveCodeBlock: {
+                playgroundPosition: 'bottom',
+            },
+            docs: {
+                sidebar: {
+                    hideable: true,
+                    autoCollapseCategories: true,
+                },
+            },
+            colorMode: {
+                defaultMode: 'light',
+                disableSwitch: false,
+                respectPrefersColorScheme: true,
+            },
+            // image: 'img/docusaurus-soc.png',
             navbar: {
                 title: 'Junjie',
                 logo: {
                     alt: 'My Site Logo',
                     src: 'img/logo.svg',
-                    href: '/'
+                    srcDark: 'img/docusaurus_keytar.svg',
+                    width: 32,
+                    height: 32,
                 },
                 items: [
                     {
@@ -77,23 +93,32 @@ const config = {
                     },
                     {to: '/blog', label: 'Blog', position: 'left'},
                     {
-                        href: 'https://github.com/junjieweb',
-                        // label: 'GitHub',
+                        href: 'https://docusaurus.io/zh-CN/',
+                        label: 'Docusaurus',
                         position: 'right',
-                        className: "header-github-link",
-                        "aria-label": "GitHub profile",
                     },
-
+                    // 多语言切换
+                    /*{
+                        type: 'localeDropdown',
+                        position: 'right',
+                    },*/
+                    // 右侧GitHub图标
+                    {
+                        href: 'https://github.com/junjieweb',
+                        position: 'right',
+                        className: 'header-github-link',
+                        'aria-label': 'GitHub repository',
+                    },
                 ],
             },
             footer: {
-                style: 'dark',
+                style: 'light',
                 links: [
                     {
                         title: 'Docs',
                         items: [
                             {
-                                label: 'Notes',
+                                label: 'Docs',
                                 to: '/docs/web',
                             },
                         ],
@@ -103,11 +128,15 @@ const config = {
                         items: [
                             {
                                 label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com',
+                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
                             },
                             {
                                 label: 'Discord',
                                 href: 'https://discordapp.com/invite/docusaurus',
+                            },
+                            {
+                                label: 'Twitter',
+                                href: 'https://twitter.com/docusaurus',
                             },
                         ],
                     },
@@ -119,17 +148,14 @@ const config = {
                                 to: '/blog',
                             },
                             {
-                                label: 'Docusaurus',
-                                href: 'https://docusaurus.io/zh-CN/',
-                            },
-                            {
                                 label: 'GitHub',
                                 href: 'https://github.com/junjieweb',
                             },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} Junjie, junjieweb. Built with Docusaurus.`,
+
+                copyright: `Copyright © ${new Date().getFullYear()} junjieweb, Inc. Built with Docusaurus.`,
             },
             prism: {
                 theme: lightCodeTheme,
