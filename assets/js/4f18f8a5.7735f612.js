@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[7291],{5149:function(e){e.exports=JSON.parse('{"label":"MDN","permalink":"/blog/tags/mdn","allTagsPath":"/blog/tags","count":2}')}}]);
