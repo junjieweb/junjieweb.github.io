@@ -104,7 +104,7 @@ const config = {
                     },*/
                     // 右侧GitHub图标
                     {
-                        href: 'https://github.com/junjieweb',
+                        href: 'https://github.com/junjieweb/junjieweb.github.io',
                         position: 'right',
                         className: 'header-github-link',
                         'aria-label': 'GitHub repository',
