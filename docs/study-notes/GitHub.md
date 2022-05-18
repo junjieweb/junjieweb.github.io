@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # GitHub
 
 GitHub 是一个 Git 仓库管理网站。可以创建远程中心仓库，为多人合作开发提供便利。
