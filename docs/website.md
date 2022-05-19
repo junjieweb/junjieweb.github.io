@@ -26,10 +26,13 @@ Dribbble 是设计师获得灵感、反馈和工作的地方，是你发现和�
 快速构建以内容为核心的最佳网站，可使用 React 扩展与自定义，提供自己的 React 组件，完全掌控网站的浏览体验。
 
 ## [iconmonstr](https://iconmonstr.com)
-矢量图标库，拥有大量图标资源，支持SVG、EPS、PSD、PNG格式
+矢量图标库，拥有大量图标资源，支持SVG、EPS、PSD、PNG格式。屏蔽广告插件不能用。
 
 ## [iconfont - 阿里矢量图库](https://www.iconfont.cn)
 国内的矢量图库，拥有大量图标资源，支持格式也非常多，并且可在线调色。
+
+## [Font Awesome](https://fontawesome.com/)
+Font Awesome是互联网的图标库和工具包，被数百万设计师、开发人员和内容创建者使用。
 
 ## [Freepik](https://www.freepik.com)
 下载高质量的图片，有各种素材图，并且提供的格式丰富，如PSD、SVG、AI、ESP等。
