@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Junjie Blog</title>
-        <link>https://your-docusaurus-test-site.com/blog</link>
+        <link>https://junjieweb.github.io/blog</link>
         <description>Junjie Blog</description>
         <lastBuildDate>Thu, 02 Sep 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,7 +10,7 @@
         <language>zh-CN</language>
         <item>
             <title><![CDATA[Web 和 Web标准]]></title>
-            <link>https://your-docusaurus-test-site.com/blog/mdn01</link>
+            <link>https://junjieweb.github.io/blog/mdn01</link>
             <guid>mdn01</guid>
             <pubDate>Thu, 02 Sep 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[这篇文章提供了一些有用的 Web 背景知识——它是如何产生的，什么是 Web 标准技术，它们是如何协同工作的，为什么“ Web 开发人员”是一个很好的职业选择，以及您将在本课程中学习哪些最佳做法。]]></description>
@@ -19,7 +19,7 @@
         </item>
         <item>
             <title><![CDATA[MDN 学习路线]]></title>
-            <link>https://your-docusaurus-test-site.com/blog/mdn02</link>
+            <link>https://junjieweb.github.io/blog/mdn02</link>
             <guid>mdn02</guid>
             <pubDate>Wed, 01 Sep 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[欢迎来到我们的 Web 前端开发者学习路线图！]]></description>
@@ -35,7 +35,7 @@
         </item>
         <item>
             <title><![CDATA[git历史版本回滚]]></title>
-            <link>https://your-docusaurus-test-site.com/blog/git</link>
+            <link>https://junjieweb.github.io/blog/git</link>
             <guid>git</guid>
             <pubDate>Sat, 28 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[查看历史记录 如果内容偏多，需要使用方向键上下滚动，按q退出]]></description>
@@ -44,7 +44,7 @@
         </item>
         <item>
             <title><![CDATA[Welcome]]></title>
-            <link>https://your-docusaurus-test-site.com/blog/welcome</link>
+            <link>https://junjieweb.github.io/blog/welcome</link>
             <guid>welcome</guid>
             <pubDate>Thu, 26 Aug 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[博客文章支持 Docusaurus Markdown features, 如 MDX.]]></description>
