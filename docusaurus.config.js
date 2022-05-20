@@ -92,12 +92,6 @@ const config = {
                         label: '📒Docs',
                     },
                     {to: '/blog', label: '📑Blog', position: 'left'},
-                    // 多语言切换
-                    /*{
-                        type: 'localeDropdown',
-                        position: 'right',
-                    },*/
-                    // 右侧GitHub图标
                     {
                         href: 'https://github.com/junjieweb/junjieweb.github.io',
                         position: 'right',
@@ -150,7 +144,7 @@ const config = {
                     },
                 ],
 
-                copyright: `Copyright © ${new Date().getFullYear()} junjieweb, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} junjieweb. Built with Docusaurus.`,
             },
             prism: {
                 theme: lightCodeTheme,
