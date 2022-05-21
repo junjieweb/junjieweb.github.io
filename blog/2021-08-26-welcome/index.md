@@ -2,7 +2,7 @@
 slug: welcome
 title: Welcome
 authors: [junjie]
-tags: [facebook, hello, docusaurus]
+tags: [ hello, docusaurus]
 ---
 
 博客文章支持 [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), 如 [MDX](https://mdxjs.com/).
@@ -18,7 +18,7 @@ tags: [facebook, hello, docusaurus]
 <button onClick={() => alert('button clicked!')}>Click me!</button>
 
 :::
-
+<!--truncate-->
 [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
 
 Simply add Markdown files (or folders) to the `blog` directory.
