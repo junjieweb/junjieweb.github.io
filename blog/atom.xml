@@ -64,7 +64,6 @@
             <name>Junjie</name>
             <uri>https://github.com/junjieweb</uri>
         </author>
-        <category label="facebook" term="facebook"/>
         <category label="hello" term="hello"/>
         <category label="docusaurus" term="docusaurus"/>
     </entry>
