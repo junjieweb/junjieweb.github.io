@@ -33,7 +33,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    path:'docs',
+                    path: 'docs',
                     sidebarPath: require.resolve('./sidebars.js'),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
@@ -74,6 +74,10 @@ const config = {
                 disableSwitch: false,
                 respectPrefersColorScheme: true,
             },
+            announcementBar: {
+                id: 'announcementBar-2', // Increment on change
+                content: `⭐️ If you like this site, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/junjieweb/junjieweb.github.io">GitHub</a>`,
+            },
             // image: 'img/docusaurus-soc.png',
             navbar: {
                 title: 'Junjie',
@@ -87,10 +91,24 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'web',
+                        docId: 'intro',
                         position: 'left',
-                        label: '📒Docs',
+                        label: '📒前端笔记',
                     },
+                    {
+                        type: 'docSidebar',
+                        position: 'left',
+                        sidebarId: 'interview',
+                        label: '👨‍💻面试题',
+                    },
+                    {
+                        type: 'docSidebar',
+                        position: 'left',
+                        sidebarId: 'api',
+                        label: '🚀超高频面试问题',
+                    },
+                    {to: '/website', label: '🌐网站导航', position: 'left'},
+                    {to: '/Tools-website', label: '🧰工具网站', position: 'left'},
                     {to: '/blog', label: '📑Blog', position: 'left'},
                     {
                         href: 'https://github.com/junjieweb/junjieweb.github.io',
@@ -101,7 +119,7 @@ const config = {
                 ],
             },
             footer: {
-                style: 'light',
+                style: 'dark',
                 links: [
                     {
                         title: 'Docs',
