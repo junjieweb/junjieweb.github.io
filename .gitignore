@@ -1,6 +1,10 @@
 # Dependencies
 /node_modules
+
+# IDE
 /.idea
+/.vscode
+
 # Production
 /build
 
