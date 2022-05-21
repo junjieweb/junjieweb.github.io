@@ -52,7 +52,7 @@ function HomepageHeader() {
                     />
                 </h1>
                 <div className={styles.indexCtas}>
-                    <Link className="button button--primary" to="/docs">
+                    <Link className="button button--primary" to="/docs/study-notes/html笔记">
                         <Translate>前端笔记</Translate>
                     </Link>
                     <Link className="button button--info" to="/website">
