@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2535],{5641:function(e){e.exports=JSON.parse('{"title":"All our posts","items":[{"title":"git\u5386\u53f2\u7248\u672c\u56de\u6eda","permalink":"/blog/git"},{"title":"Welcome","permalink":"/blog/welcome"}]}')}}]);
