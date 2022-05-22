@@ -4,15 +4,15 @@
         <title>Junjie Blog</title>
         <link>https://junjieweb.github.io/blog</link>
         <description>Junjie Blog</description>
-        <lastBuildDate>Sat, 28 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 05 Sep 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
         <item>
-            <title><![CDATA[git历史版本回滚]]></title>
+            <title><![CDATA[Git历史版本回滚]]></title>
             <link>https://junjieweb.github.io/blog/git</link>
             <guid>git</guid>
-            <pubDate>Sat, 28 Aug 2021 00:00:00 GMT</pubDate>
+            <pubDate>Sun, 05 Sep 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[查看历史记录 如果内容偏多，需要使用方向键上下滚动，按q退出]]></description>
             <content:encoded><![CDATA[<p><strong>查看历史记录</strong> 如果内容偏多，需要使用方向键上下滚动，按q退出</p><ul><li><code>git log</code></li><li><code>git log --oneline</code></li><li><code>git reflog</code> 查看所有操作记录</li></ul><p>进行版本回退时，不需要使用完整的哈希字符串，前七位即可. 版本切换之前，要提交当前的代码状态到仓库</p><p>找到想要回退的版本号之后，在本地 Git 仓库执行如下命令：</p><p><code>git reset --hard &lt;版本号&gt;</code> 或者 <code>git reset --soft &lt;版本号&gt;</code></p><p>对于上述两条命令，仅有<code>--hard</code>和<code>--soft</code>参数的不同，两者的区别是：</p><ul><li>--hard，抛弃当前工作区的修改</li><li>--soft，回退到之前的版本，但保留当前工作区的修改，可以重新提交</li></ul><p>执行完本地回滚之后，还需要执行如下命令，同步远端的内容：<code>git push origin &lt;分支名&gt;</code></p><p>在执行上述命令的时候，可能会提示本地的版本落后于远端的版本，因此我们还需要在上述命令中加上--force参数：<code>git push origin &lt;分支名&gt; --force</code></p><p><strong>回退命令：</strong></p><ul><li><code>git reset --hard HEAD^</code> 回退到上个版本</li><li><code>git reset --hard HEAD~3</code> 回退到前3次提交之前，以此类推，回退到n次提交之前</li><li><code>git reset --hard commit_id</code> 退到/进到，指定commit的哈希码（这次提交之前或之后的提交都会回滚）</li></ul><p>回滚后提交可能会失败，必须强制提交</p><p>强推到远程：(可能需要解决对应分支的保护状态)</p><p><code>git push origin HEAD --force</code></p>]]></content:encoded>
             <category>Git</category>
