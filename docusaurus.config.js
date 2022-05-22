@@ -91,7 +91,7 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'intro',
+                        docId: 'MDN',
                         position: 'left',
                         label: '📒前端笔记',
                     },
@@ -104,7 +104,7 @@ const config = {
                     {
                         type: 'docSidebar',
                         position: 'left',
-                        sidebarId: 'api',
+                        sidebarId: 'UHF',
                         label: '🚀超高频面试问题',
                     },
                     {to: '/website', label: '🌐网站导航', position: 'left'},

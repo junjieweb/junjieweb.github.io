@@ -1,8 +1,5 @@
 ---
-slug: mdn02
 title: MDN 学习路线
-authors: junjie
-tags: [MDN]
 ---
 
 :::tip

@@ -12,21 +12,21 @@ import useBaseUrl, {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
     return (
-        // <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        //     <div className="container">
-        //         <img alt="Docusaurus 与 Keytar" className="heroLogo_jM6J" src="/img/docusaurus_keytar.svg" width="200"
-        //              height="200"/>
-        //         <h1 className="hero__title">{siteConfig.title}</h1>
-        //         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        //         <div className={styles.buttons}>
-        //             <Link
-        //                 className="button button--secondary button--lg"
-        //                 to="/website">
-        //                 Embraces Open Source 💻️
-        //             </Link>
-        //         </div>
-        //     </div>
-        // </header>
+        /*<header className={clsx('hero hero--primary', styles.heroBanner)}>
+            <div className="container">
+                <img alt="Docusaurus 与 Keytar" className="heroLogo_jM6J" src="/img/docusaurus_keytar.svg" width="200"
+                     height="200"/>
+                <h1 className="hero__title">{siteConfig.title}</h1>
+                <p className="hero__subtitle">{siteConfig.tagline}</p>
+                <div className={styles.buttons}>
+                    <Link
+                        className="button button--secondary button--lg"
+                        to="/website">
+                        Embraces Open Source 💻️
+                    </Link>
+                </div>
+            </div>
+        </header>*/
         <div className={styles.hero} data-theme="dark">
             <div className={styles.heroInner}>
                 <h1 className={styles.heroProjectTagline}>
@@ -52,7 +52,7 @@ function HomepageHeader() {
                     />
                 </h1>
                 <div className={styles.indexCtas}>
-                    <Link className="button button--primary" to="/docs/study-notes/html笔记">
+                        <Link className="button button--primary" to="/docs/MDN">
                         <Translate>前端笔记</Translate>
                     </Link>
                     <Link className="button button--info" to="/website">
