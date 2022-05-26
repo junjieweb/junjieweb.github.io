@@ -77,6 +77,7 @@ const config = {
             announcementBar: {
                 id: 'announcementBar-2', // Increment on change
                 content: `⭐️ If you like this site, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/junjieweb/junjieweb.github.io">GitHub</a>`,
+                // isCloseable: false, // 是否可关闭
             },
             // image: 'img/docusaurus-soc.png',
             navbar: {
@@ -125,8 +126,16 @@ const config = {
                         title: 'Docs',
                         items: [
                             {
-                                label: 'Docs',
-                                to: '/docs/intro',
+                                label: '笔记',
+                                to: '/docs/MDN',
+                            },
+                            {
+                                label: '面试题',
+                                to: '/docs/interview-questions/html面试题',
+                            },
+                            {
+                                label: '网站导航',
+                                to: '/website',
                             },
                         ],
                     },
