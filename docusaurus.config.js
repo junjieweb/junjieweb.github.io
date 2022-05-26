@@ -147,6 +147,10 @@ const config = {
                                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
                             },
                             {
+                                label: ' Docusaurus',
+                                href: 'https://docusaurus.io/zh-CN/',
+                            },
+                            {
                                 label: 'Discord',
                                 href: 'https://discordapp.com/invite/docusaurus',
                             },
