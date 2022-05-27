@@ -58,12 +58,29 @@ sidebar_position: 6
 
 ## 常用命令
 
-1. ` git status` 版本状态查看，如果显示的是红色修改，表明此修改只存在于工作区。如果显示的是绿色修改，表明此修改只存在于工作区和暂存区
+1. `git init` 仓库初始化
 2. `git add -A` 添加所有新文件到暂存区，添加的是修改，而不是文件
 3. `git commit -m '注释'` 提交修改并注释
-4. `git diff` 查看工作区与暂存区的差异（不显示新增文件）显示做了哪些修改
-5. `git diff --cached` 查看暂存区与仓库的差异
-6. `git ls-files` 查看暂存区的文件内容
+4. `git status` 版本状态查看，如果显示的是红色修改，表明此修改只存在于工作区。如果显示的是绿色修改，表明此修改只存在于工作区和暂存区
+5. `git diff` 查看工作区与暂存区的差异（不显示新增文件）显示做了哪些修改
+6. `git diff --cached` 查看暂存区与仓库的差异
+7. `git ls-files` 查看暂存区的文件内容
+8. `git clone` 克隆仓库
+9. `git pull` 拉取指定仓库的指定分支 `git pull origin master`
+10. `git branch` 查看分支
+    - `git branch name` 创建
+    - `git branch -d name` 删除分支
+    - `git merge name` 分支合并
+    - `git checkout name` 切换分支
+    - `git checkout -b name` 创建并切换
+11. `git remote` 远程仓库别名管理
+    - `add` 新增别名
+    - `remove` 移除别名
+    - `rename` 重命名别名
+12. `git push` 将本地仓库的『分支』推送到远端仓库
+    - `git push -u origin master`
+    - `git push dev master`
+    - `git push dev master:main`
 
 ## 历史版本回滚
 
