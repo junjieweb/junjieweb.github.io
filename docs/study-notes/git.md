@@ -82,3 +82,64 @@ sidebar_position: 6
 
 - 查看所有操作记录
 - `git reflog`
+
+## 配置忽略文件
+
+#### 仓库中没有提交该文件
+
+项目中有些文件不应该存储到版本库中，Git 中需要创建一个文件 `.gitignore` 配置忽略，一般与 .git 目录同级。
+
+常见情况有：
+
+1. 临时文件
+2. 多媒体文件，如音频、视频。
+3. 编辑器生成的配置文件（.idea）
+4. npm 安装的第三方模块
+    ```
+   # 忽略所有的 .idea 文件夹
+   .idea
+   # 忽略所有以 .test 结尾的文件
+   *.test
+   # 忽略 node_modules 文件和文件夹
+   /node_modules
+   ```
+
+`.gitignore` 可以在子文件夹下创建
+
+#### 仓库中已经提交该文件
+
+对于已经加入到版本库的文件，可以在版本库中删除该文件 `git rm --cached .idea`
+
+然后在 `.gitignore` 中配置忽略, add和commit提交即可
+
+如果 `.gitignore` 创建失败, 可以使用『编辑器』或者『命令行』方式创建
+
+git 会默认忽略空文件夹
+
+## 分支
+
+分支是 Git 重要的功能特性之一，开发人员可以在主开发线的基础上分离出新的开发线。branch
+
+基本操作
+
+- 创建分支 `git branch name` name 为分支的名称
+
+- 查看分支 `git branch`
+
+- 切换分支 `git checkout name`
+
+- 合并分支 `git merge name`
+
+- 删除分支 `git branch -d name`
+
+- 创建并切换分支 `git checkout -b name`
+
+- 注意：每次在切换分支前，提交以下当前分支
+
+## 冲突
+
+当多个分支修改同一个文件后，合并分支的时候就会产生冲突。冲突的解决非常简单，『将内容修改为最终想要的结果』，然后继续执行 git add 与 git commit 就可以了。
+
+1. `git status` 定位有冲突的文件
+2. 修改冲突文件的内容，为最终正确的样子
+3. `git add` 和 `git commit`
