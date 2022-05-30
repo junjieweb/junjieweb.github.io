@@ -1,10 +1,10 @@
 ---
-sidebar_position: 10
+sidebar_position: 9
 ---
 
 # ES6 新特性
 
-**`ECMAScript`** 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。
+**`ECMAScript`** 是由Ecma国际通过ECMA-262标准化的脚本程序设计语言。[**ES6 入门教程**](https://es6.ruanyifeng.com/)
 
 ## `let`关键字
 
@@ -25,20 +25,34 @@ sidebar_position: 10
 4. 不允许重复声明
 5. 块级作用域
 
-> 注意: 对象属性修改和数组元素变化不会出发 `const` 错误
+var和let的区别？
 
-应用场景：声明对象类型使用 `const`，非对象类型声明选择 `let`
+1. var声明的变量没有块作用域，let声明的有块作用域
+2. var可以声明同一个变量（覆盖），let不可以
+3. var有变量提升，let没有
+
+:::tip 注意
+对象属性修改和数组元素变化不会触发 `const` 错误
+
+**应用场景**：声明对象类型使用 `const`，非对象类型声明选择 `let`
+:::
 
 ## 变量的解构赋值
 
 ES6允许按照一定模式从数组和对象中提取值，对变量进行赋值，这被称为解构赋值。
 
-```javascript
-//数组的解构赋值
+```javascript title="数组的解构赋值"
+// 表示，可以从数组中提取值，按照对应位置，对变量赋值。
+let [a, b, c] = [10, 20, 30];
+
 const arr = ['宋小宝', '刘能', '赵四', '小沈阳'];
 let [song, liu, zhao, xiao] = arr;
 console.log(song, liu, zhao, xiao);
-//对象的解构赋值
+```
+
+```javascript title="对象的结构赋值"
+let {a, b} = {a: 10, b: 20};
+
 const star = {
     name: '于谦',
     tags: ['抽烟', '喝酒', '烫头'],
@@ -49,7 +63,19 @@ const star = {
 let {name, tags: [chou, he, tang], say} = star;
 ```
 
-> 注意：频繁使用对象方法、数组元素，就可以使用解构赋值形式
+```javascript title="字符串的结构赋值"
+const [a, b, c, d, e] = 'hello';
+a // "h"
+b // "e"
+c // "l"
+d // "l"
+e // "o"
+```
+
+:::tip 注意
+
+频繁使用对象方法、数组元素，就可以使用解构赋值形式。
+:::
 
 ## 模板字符串
 
@@ -216,6 +242,29 @@ ES6创造了一种新的遍历命令`for...of`循环，`Iterator`接口主要供
 
 Promise是ES6引入的异步编程的新解决方案。语法上Promise是一个构造函数，用来封装异步操作并可以获取其成功或失败的结果。
 
+功能：写异步的代码，同步的执行出来，让代码更好的维护易读
+
+同步：只有前一个任务执行完，才能继续执行下一个任务
+
+异步：不进入主线程，进入任务队列，只有任务队列通知主线程，某个异步任务才可以执行，该任务才会进入主线程
+
+1. 每一个Promise实例都有3种状态：初始化(pending)、成功(fulfilled)、失败(rejected)
+2. 每一个Promise实例在刚被new出来的那一刻，状态都是初始化(pending)
+3. executor函数会接收到2个参数，它们都是函数，分别用形参：resolve、reject接收
+
+### `async` 和 `await`
+
+async修饰的函数返回一个Promise对象，Promise实例的结果由async函数执行的返回值决定
+
+await右侧的表达式一般为Promise实例对象, 但也可以是其它的值
+
+- 如果表达式是Promise实例对象, await后的返回值是promise成功的值
+- 如果表达式是其它值, 直接将此值作为await的返回值
+
+await必须写在async函数中, 但async函数中可以没有await
+
+如果await的Promise实例对象失败了, 就会抛出异常, 需要通过try...catch来捕获处理
+
 ## `Set`
 
 ES6 提供了新的数据结构 Set（集合）。它类似于数组，『但成员的值都是唯一』的
@@ -245,7 +294,7 @@ Map也实现了iterator接口，所以可以使用『扩展运算符』和`for..
 - `has` 检测Map中是否包含某个元素，返回`boolean`值
 - `clear` 清空集合，返回`undefined`
 
-## class类
+## `class` 类
 
 ES6 提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。
 
@@ -260,3 +309,25 @@ ES6 提供了更接近传统语言的写法，引入了Class（类）这个概�
 - `static` 定义静态方法和属性
 - 父类方法可以重写
 - `get` 和 `set` 方法
+
+```javascript title="基本用法"
+class Person {
+    constructor(name) {
+        this.name = name
+    }
+
+    run() {
+        return '这是run方法'
+    }
+}
+
+const p = new Person('tom')
+```
+
+```javascript title="继承"
+class Child extends Parent {
+    constructor() {
+        super()
+    }
+}
+```
