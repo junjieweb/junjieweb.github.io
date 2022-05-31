@@ -9,6 +9,7 @@ sidebar_position: 7
 
 **目的**：借助GitHub托管项目代码。
 :::
+
 ## 基本概念
 
 `Repositories`（仓库）：用来存放项目代码，每个项目对应一个仓库。
@@ -84,3 +85,5 @@ GitHub 远程仓库使用流程较为简单，主要有以下几种场景：
 
 `git pull` 只会拉取指定的分支内容
 :::
+
+![](./img/git、nodejs、npm复习.png)
