@@ -38,6 +38,36 @@ less既可以在客户端上运行，也可以借助Node.js在服务端运行
 
 **伪元素、伪类、结构类等带冒号的选择器**：在选择器前加 `&`
 
+```less
+ul {
+  width: 300px;
+  margin: 100px auto;
+  border: 1px solid black;
+  list-style: none;
+
+  li {
+    height: 30px;
+    line-height: 30px;
+
+    a {
+      color: red;
+    }
+
+    &:hover {
+      background-color: pink;
+    }
+
+    &:nth-child(2) {
+      background-color: red;
+    }
+  }
+
+  > a {
+    color: yellowgreen;
+  }
+}
+```
+
 ## 混合（Mixin）
 
 混合的本质，就相当于在调用的位置写了混合内部的样式
