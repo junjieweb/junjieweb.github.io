@@ -61,6 +61,14 @@ const star = {
     }
 };
 let {name, tags: [chou, he, tang], say} = star;
+
+let obj = {a: 1, b: {c: 2}};
+//标准的解构赋值
+// const {c} = obj.b;
+//连续解构赋值
+const {b: {c}} = obj;
+//连续解构赋值 + 重命名
+const {b: {c: value}} = obj;
 ```
 
 ```javascript title="字符串的结构赋值"
