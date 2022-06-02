@@ -38,6 +38,29 @@ sidebar_position: 1
    (2). for
    ```
 
+```html
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<body>
+<!-- 准备好一个容器 -->
+<div id="root">
+    <h1>Hello {{name.toUpperCase()}}</h1>
+</div>
+</body>
+<script>
+    //阻止 vue 在启动时生成生产提示
+    Vue.config.productionTip = false;
+
+    //创建Vue实例
+    new Vue({
+        el: "#root",//el用于指定当前Vue实例为哪个容器服务，值通常为css选择器字符串
+        data: {//data中用于存储数据，数据供el所指定的容器去使用
+            name: 'Vue'
+        },
+    });
+</script>
+```
+
 ## 模板语法
 
 Vue模板语法有2大类：
