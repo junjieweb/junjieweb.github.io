@@ -107,3 +107,183 @@ p.then(
 
 console.log('hello');
 ```
+
+## API
+
+### Promise构造函数
+
+`new Promise (executor) {}`
+
+- `executor` 函数: 是**同步**执行的，`(resolve, reject) => {}`
+- `resolve` 函数: 调用`resolve`将Promise实例内部状态改为**成功(fulfilled)**。
+- `reject` 函数: 调用`reject`将Promise实例内部状态改为**失败(rejected)**。
+
+:::tip说明
+executor函数会在Promise内部立即同步调用,异步代码放在executor函数中。
+:::
+
+### Promise.prototype.then方法
+
+`Promise实例.then(onFulfilled,onRejected)`
+
+- `onFulfilled`: 成功的回调函数 `(value) => {}`
+- `onRejected`: 失败的回调函数 `(reason) => {}`
+
+:::tip特别注意(难点)
+then方法会返回一个新的Promise实例对象
+:::
+
+```javascript
+const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(100);
+    }, 1000)
+})
+const x = p.then(
+    value => {
+        console.log('成功了', value)
+    },
+    reason => {
+        console.log('失败了', reason)
+    }
+)
+console.log(x); // Promise {<pending>}
+```
+
+### Promise.prototype.catch方法
+
+`Promise实例.catch(onRejected)`
+
+`onRejected`: 失败的回调函数 `(reason) => {}`
+
+:::tip说明
+catch方法是then方法的语法糖, 相当于: `then(undefined, onRejected)`
+:::
+
+```javascript
+const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject(-1)
+    }, 1000)
+})
+p.then(
+    value => {
+        console.log('成功了', value)
+    },
+    reason => {
+        console.log('失败了1', reason)
+    }
+)
+p.catch(
+    reason => {
+        console.log('失败了2', reason)
+    }
+)
+```
+
+### Promise.resolve方法
+
+`Promise.resolve(value)`
+
+用于快速返回一个状态为 `fulfilled` 或 `rejected` 的Promise实例对象
+
+:::tip
+value的值可能是：(1)非Promise值  (2)Promise值
+:::
+
+```javascript
+const p0 = Promise.reject(-100);
+const p = Promise.resolve(p0);
+p.then(
+    value => {
+        console.log('成功了', value)
+    },
+    reason => {
+        console.log('失败了', reason)
+    }
+)
+```
+
+### Promise.reject方法
+
+`Promise.reject方法(reason)`
+
+用于快速返回一个状态必为 `rejected` 的Promise实例对象
+
+```javascript
+const p0 = Promise.resolve(100);
+const p = Promise.reject(p0);
+p.then(
+    value => {
+        console.log('成功了', value)
+    },
+    reason => {
+        console.log('失败了', reason)
+    }
+)
+```
+
+### Promise.all方法
+
+`Promise.all(promiseArr)`
+
+`promiseArr`: 包含n个Promise实例的数组
+
+返回一个新的Promise实例, **只有所有的promise都成功才成功, 只要有一个失败了就直接失败**。
+
+```javascript
+const p1 = Promise.resolve('a');
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('b')
+    }, 500)
+})
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('c')
+    }, 2000)
+})
+
+const x = Promise.all([p1, p2, p3]);
+x.then(
+    value => {
+        console.log('成功了', value)
+    },
+    reason => {
+        console.log('失败了', reason)
+    }
+)
+```
+
+### Promise.race方法
+
+`Promise.race(promiseArr)`
+
+`promiseArr`: 包含n个Promise实例的数组
+
+返回一个新的Promise实例, 成功还是很失败？以最先出结果的promise为准。
+
+```javascript
+const p1 = Promise.resolve('a');
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('b')
+    }, 500)
+})
+const p3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('c')
+    }, 2000)
+})
+
+const x = Promise.race([p1, p2, p3]);
+x.then(
+    value => {
+        console.log('成功了', value)
+    },
+    reason => {
+        console.log('失败了', reason)
+    }
+)
+```
+
