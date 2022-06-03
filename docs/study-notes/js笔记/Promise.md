@@ -287,3 +287,227 @@ x.then(
 )
 ```
 
+## Promise关键问题
+
+### 1. 如何改变一个Promise实例的状态?
+
+- 执行`resolve(value)`: 如果当前是pending就会变为fulfilled
+- 执行`reject(reason)`: 如果当前是pending就会变为rejected
+- 执行器函数(executor)抛出异常: 如果当前是pending就会变为rejected
+
+### 2. 改变Promise实例的状态和指定回调函数谁先谁后?
+
+1. 都有可能, 正常情况下是先指定回调再改变状态, 但也可以先改状态再指定回调
+2. 如何先改状态再指定回调? 延迟一会再调用`then()`
+3. Promise实例什么时候才能得到数据?
+    - 如果先指定的回调, 那当状态发生改变时, 回调函数就会调用, 得到数据
+    - 如果先改变的状态, 那当指定回调时, 回调函数就会调用, 得到数据
+
+```javascript
+//先指定回调，后改变状态（最常见）
+const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('a');
+    }, 1000);
+});
+p.then(
+    value => {
+        console.log('成功了', value);
+    },
+    reason => {
+        console.log('失败了', reason);
+    }
+)
+```
+
+```javascript
+//先改变状态，后指定回调
+const p = new Promise((resolve, reject) => {
+    resolve('a');
+});
+setTimeout(() => {
+    p.then(
+        value => {
+            console.log('成功了', value);
+        },
+        reason => {
+            console.log('失败了', reason);
+        }
+    )
+}, 2000);
+```
+
+### 3. Promise实例.then()返回的是一个【新的Promise实例】，它的值和状态由什么决定?
+
+**简单表达:** 由then()所指定的回调函数执行的结果决定
+
+**详细表达:**
+
+1. 如果then所指定的回调返回的是非Promise值a:
+   那么【新Promise实例】状态为：成功(fulfilled), 成功的value为a
+2. 如果then所指定的回调返回的是一个Promise实例p:
+   那么【新Promise实例】的状态、值，都与p一致
+3. 如果then所指定的回调抛出异常:
+   那么【新Promise实例】状态为rejected, reason为抛出的那个异常
+
+```javascript
+const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('a');
+    }, 100);
+});
+p.then(
+    value => {
+        console.log('成功了1', value);
+        return Promise.reject('a');
+    },
+    reason => {
+        console.log('失败了1', reason);
+    }
+).then(
+    value => {
+        console.log('成功了2', value);
+        return true;
+    },
+    reason => {
+        console.log('失败了2', reason);
+        return 100;
+    }
+).then(
+    value => {
+        console.log('成功了3', value);
+        throw 900;
+    },
+    reason => {
+        console.log('失败了3', reason);
+        return false;
+    }
+).then(
+    value => {
+        console.log('成功了4', value);
+        return -100;
+    },
+    reason => {
+        console.log('失败了4', reason);
+    }
+)
+```
+
+### 4. Promise如何串连多个异步任务?
+
+通过then的链式调用
+
+```javascript
+    function sendAjax(url, data) {
+    return new Promise((resolve, reject) => {
+        //实例xhr
+        const xhr = new XMLHttpRequest();
+        //绑定监听
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    resolve(xhr.response);
+                } else {
+                    reject('请求出错了');
+                }
+            }
+        }
+        //整理参数
+        let str = '';
+        for (let key in data) {
+            str += `${key}=${data[key]}&`;
+        }
+        str = str.slice(0, -1);
+
+        xhr.open('GET', url + '?' + str);
+        xhr.responseType = 'json';
+        xhr.send();
+    });
+}
+
+//发送第一次请求
+sendAjax('https://api.apiopen.top/getJoke', {page: 1})
+    .then(
+        value => {
+            console.log('第1次请求成功了', value);
+            //发送第二次请求
+            return sendAjax('https://api.apiopen.top/getJoke', {page: 1});
+        },
+        reason => {
+            console.log('第1次请求失败了', reason);
+        }
+    )
+    .then(
+        value => {
+            console.log('第2次请求成功了', value);
+            //发送第三次请求
+            return sendAjax('https://api.apiopen.top/getJoke', {page: 1});
+        },
+        reason => {
+            console.log('第2次请求失败了', reason);
+        }
+    )
+    .then(
+        value => {
+            console.log('第3次请求成功了', value);
+        },
+        reason => {
+            console.log('第3次请求失败了', reason);
+        }
+    )
+```
+
+### 5. 中断promise链
+
+当使用promise的then链式调用时，在中间中断，不再调用后面的回调函数
+
+办法：在失败的回调函数中返回一个pending状态的Promise实例
+
+```javascript
+return new Promise(() => {
+});
+```
+
+### 6. promise错误穿透
+
+当使用promise的then链式调用时, 可以在最后用catch指定一个失败的回调,
+
+前面任何操作出了错误, 都会传到最后失败的回调中处理了
+
+:::tip
+如果不存在then的链式调用，就不需要考虑then的错误穿透。
+:::
+
+```javascript
+const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(-1)
+    }, 500)
+})
+
+p.then(
+    value => {
+        console.log('成功了' + value)
+        return 'b';
+    },
+    reason => {
+        throw reason
+    }//底层帮我们补上的这个失败的回调
+).then(
+    value => {
+        console.log('成功了' + value)
+        return Promise.reject(-3)
+    },
+    reason => {
+        throw reason
+    }//底层帮我们补上的这个失败的回调
+).catch(
+    reason => {
+        console.log('失败了' + reason)
+    }
+)
+```
+
+## Promise的优势
+
+
