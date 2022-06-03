@@ -519,3 +519,92 @@ p.then(
     - 回调地狱的弊病：代码不便于阅读、不便于异常的处理
     - 一个不是很优秀的解决方案：then的链式调用
     - 终极解决方案：`async/await`（底层实际上依然使用then的链式调用）
+
+## `async` 与 `await`
+
+**`async` 修饰的函数**
+
+- 函数的返回值为promise对象
+- Promise实例的结果由async函数执行的返回值决定
+
+**`await` 表达式** await右侧的表达式一般为Promise实例对象, 但也可以是其它的值
+
+- 如果表达式是Promise实例对象, await后的返回值是promise成功的值
+- 如果表达式是其它值, 直接将此值作为await的返回值
+
+:::tip注意
+
+- `await`必须写在`async`函数中, 但`async`函数中可以没有`await`
+- 如果`await`的Promise实例对象失败了, 就会抛出异常, 需要通过`try...catch`来捕获处理
+
+:::
+
+```javascript
+function sendAjax(url, data) {
+    return new Promise((resolve, reject) => {
+        //实例xhr
+        const xhr = new XMLHttpRequest();
+        //绑定监听
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    resolve(xhr.response);
+                } else {
+                    reject(`请求出了点问题`);
+                }
+            }
+        }
+        //整理参数
+        let str = '';
+        for (let key in data) {
+            str += `${key}=${data[key]}&`;
+        }
+        str = str.slice(0, -1);
+
+        xhr.open('GET', url + '?' + str);
+        xhr.responseType = 'json';
+        xhr.send();
+    });
+}
+
+(async () => {
+    try {
+        const result1 = await sendAjax('https://api.apiopen.top/getJoke', {page: 1});
+        console.log('第1次请求成功了', result1);
+        const result2 = await sendAjax('https://api.apiopen.top/getJoke', {page: 1});
+        console.log('第2次请求成功了', result2);
+        const result3 = await sendAjax('https://api.apiopen.top/getJoke', {page: 1});
+        console.log('第3次请求成功了', result3);
+    } catch (e) {
+        console.log(e);
+    }
+})();
+```
+
+### await的原理
+
+我们使用async配合await这种写法：表面上不出现任何的回调函数。但实际上底层把我们写的代码进行了加工，把回调函数“还原”回来了。最终运行的代码是依然有回调的，只是程序员没有看见。
+
+```javascript
+ const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('a');
+    }, 500);
+});
+
+async function f() {
+    //程序员轻松的写法
+    const result = await p;
+    console.log(result);
+
+    //浏览器翻译后的代码
+    /*p.then(
+        result => {
+            console.log(result);
+        }
+    );*/
+}
+
+f();
+console.log(1);
+```
