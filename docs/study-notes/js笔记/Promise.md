@@ -608,3 +608,58 @@ async function f() {
 f();
 console.log(1);
 ```
+
+## 宏队列与微队列
+
+JS中用来存储待执行回调函数的队列包含2个不同特定的列队
+
+- **宏列队**: 用来保存待执行的宏任务(回调), 比如: 定时器回调/DOM事件回调/ajax回调
+- **微列队**: 用来保存待执行的微任务(回调), 比如: promise的回调/MutationObserver的回调
+
+JS执行时会区别这2个队列
+
+- JS引擎首先必须先执行所有的初始化同步任务代码
+- 每次准备取出第一个宏任务执行前, 都要将所有的微任务一个一个取出来执行
+
+**宏队列**: [宏任务1，宏任务2.....]
+
+**微队列**: [微任务1，微任务2.....]
+
+**规则**：每次要执行宏队列里的一个任务之前，先看微队列里是否有待执行的微任务
+
+1. 如果有，先执行微任务
+2. 如果没有，按照宏队列里任务的顺序，依次执行
+
+![宏队列与微队列](img/宏队列与微队列.png)
+
+## 面试题
+
+```javascript
+setTimeout(() => {
+    console.log('0');
+}, 0);
+new Promise((resolve, reject) => {
+    console.log('1');
+    resolve();
+}).then(() => {
+    console.log('2');
+    new Promise((resolve, reject) => {
+        console.log('3');
+        resolve();
+    }).then(() => {
+        console.log('4');
+    }).then(() => {
+        console.log('5');
+    });
+}).then(() => {
+    console.log('6');
+});
+new Promise((resolve, reject) => {
+    console.log('7');
+    resolve();
+}).then(() => {
+    console.log('8');
+});
+```
+
+![Promise面试题](img/Promise面试题.png)
