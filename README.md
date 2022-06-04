@@ -2,13 +2,13 @@
 
 该网站是使用现代静态网站生成器 [Docusaurus 2](https://docusaurus.io/) 构建的。
 
-### Installation
+### 安装
 
 ```
 $ npm install
 ```
 
-### Local Development
+### 本地开发
 
 ```
 $ npm start
@@ -16,7 +16,7 @@ $ npm start
 
 此命令启动本地开发服务器并打开浏览器窗口。大多数更改都会实时反映，而无需重新启动服务器。
 
-### Build
+### 构建打包
 
 ```
 $ npm run build
@@ -24,15 +24,15 @@ $ npm run build
 
 此命令将静态内容生成到“build”目录中，并且可以使用任何静态内容托管服务提供服务。
 
-### Deployment
+### 部署
 
-Using SSH:
+使用 SSH：
 
 ```
 $ USE_SSH=true yarn deploy
 ```
 
-Not using SSH:
+不使用 SSH：
 
 ```
 $ GIT_USER=<Your GitHub username> yarn deploy
