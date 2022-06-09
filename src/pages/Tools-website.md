@@ -56,11 +56,11 @@
 [**Microsoft 365 开发人员计划**](https://developer.microsoft.com/zh-cn/microsoft-365/profile)&nbsp;&nbsp;&nbsp;&nbsp;
 [**SharePoint 管理中心**](https://junjieweb-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx/home)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**Visual Studio Subscriptions**](https://my.visualstudio.com/Benefits?mkt=zh-cn)
+[**Visual Studio 订阅**](https://my.visualstudio.com/Benefits?mkt=zh-cn)
 
-[**Microsoft 365 admin center**](https://admin.microsoft.com/Adminportal/Home?source=applauncher/homepage)
+[**Microsoft 365 管理中心**](https://admin.microsoft.com/Adminportal/Home?source=applauncher/homepage)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**Windows Insider Blog**](https://blogs.windows.com/windows-insider/)
+[**Windows 预览体验成员博客**](https://blogs.windows.com/windows-insider/)
 
 ## 编程语言排行榜
 
