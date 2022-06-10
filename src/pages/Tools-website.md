@@ -6,23 +6,19 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**EmojiAll EMOJI复制和粘贴工具**](https://www.emojiall.com/zh-hans)
 
-## 矢量图标库
+## 前端
 
-[**iconmonstr 矢量图标库**](https://iconmonstr.com)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**iconfont - 阿里矢量图库**](https://www.iconfont.cn)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**Font Awesome 矢量图标库**](https://fontawesome.com/)
+### 前端开发工具下载
 
-## 设计师
-
-[**Coolors 调色板**](https://coolors.co)
+[**WebStorm**](https://www.jetbrains.com/zh-cn/webstorm/)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**Dribbble 设计稿**](https://dribbble.com)
+[**VS Code**](https://code.visualstudio.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**Freepik 下载高质量的图片**](https://www.freepik.com)
+[**Git**](https://git-scm.com/)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**TortoiseSVN**](https://tortoisesvn.net/downloads.zh.html)
 
-## 前端学习
+### 学习网站
 
 [**Markdown 官方教程**](https://markdown.com.cn/)
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -49,6 +45,22 @@
 [**grid生成**](https://cssgr.id/)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**css答题**](https://www.guess-css.app/)
+
+## 矢量图标库
+
+[**iconmonstr 矢量图标库**](https://iconmonstr.com)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**iconfont - 阿里矢量图库**](https://www.iconfont.cn)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**Font Awesome 矢量图标库**](https://fontawesome.com/)
+
+## 设计师
+
+[**Coolors 调色板**](https://coolors.co)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**Dribbble 设计稿**](https://dribbble.com)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**Freepik 下载高质量的图片**](https://www.freepik.com)
 
 ## Microsoft
 
