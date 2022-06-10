@@ -1,11 +1,9 @@
-## 工具网站
+# 工具网站
 
-[**Quick Reference**](https://quickref.me/) 提供了极其丰富的各类语言、工具的速查以及示例。
-
-[**Developer Roadmaps 开发学习路线图**](https://roadmap.sh)
-
+[**Quick Reference 各类语言、工具速查**](https://quickref.me/)
+&nbsp;&nbsp;&nbsp;&nbsp;
 [**AES 在线加密解密**](http://tool.chacuo.net/cryptaes)
-
+&nbsp;&nbsp;&nbsp;&nbsp;
 [**EmojiAll EMOJI复制和粘贴工具**](https://www.emojiall.com/zh-hans)
 
 ## 矢量图标库
@@ -24,7 +22,23 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**Freepik 下载高质量的图片**](https://www.freepik.com)
 
-## CSS工具
+## 前端学习
+
+[**Markdown 官方教程**](https://markdown.com.cn/)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**学习开发路线图**](https://roadmap.sh)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**ES6 入门教程**](https://es6.ruanyifeng.com/)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**Source Academy**](https://sourceacademy.org/sicpjs/index)
+
+[**百度前端技术学园**](http://ife.baidu.com/)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**FreeCodeCamp**](https://chinese.freecodecamp.org/learn)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**现代 JavaScript 教程**](https://zh.javascript.info/)
+
+### CSS工具
 
 [**选择器学习游戏**](https://flukeout.github.io/)
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -35,20 +49,6 @@
 [**grid生成**](https://cssgr.id/)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**css答题**](https://www.guess-css.app/)
-
-## 学习
-
-[**Markdown 官方教程**](https://markdown.com.cn/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**ES6 入门教程**](https://es6.ruanyifeng.com/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**Source Academy**](https://sourceacademy.org/sicpjs/index)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**百度前端技术学园**](http://ife.baidu.com/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**FreeCodeCamp**](https://chinese.freecodecamp.org/learn)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**现代 JavaScript 教程**](https://zh.javascript.info/)
 
 ## Microsoft
 
