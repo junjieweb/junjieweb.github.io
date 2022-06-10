@@ -52,7 +52,8 @@
 
 ## Microsoft
 
-[**Microsoft 365 开发人员计划**](https://developer.microsoft.com/zh-cn/microsoft-365/profile)&nbsp;&nbsp;&nbsp;&nbsp;
+[**Microsoft 365 开发人员计划**](https://developer.microsoft.com/zh-cn/microsoft-365/profile)
+&nbsp;&nbsp;&nbsp;&nbsp;
 [**SharePoint 管理中心**](https://junjieweb-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx/home)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**Visual Studio 订阅**](https://my.visualstudio.com/Benefits?mkt=zh-cn)
@@ -63,9 +64,9 @@
 
 ## 编程语言排行榜
 
-[**TIOBE Index**](https://www.tiobe.com/tiobe-index/)
+[**TIOBE 指数**](https://www.tiobe.com/tiobe-index/)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**编程语言排行榜**](https://hellogithub.com/report/tiobe/)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**PYPL PopularitY of Programming Language**](https://pypl.github.io/PYPL.html)
+[**PYPL 编程语言的流行度**](https://pypl.github.io/PYPL.html)
 
