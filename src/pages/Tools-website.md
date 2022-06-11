@@ -10,9 +10,10 @@
 
 ### 前端开发工具下载
 
-[**WebStorm**](https://www.jetbrains.com/zh-cn/webstorm/)
+
+[![WebStorm logo](/img/logo/WebStorm_icon.svg)](https://www.jetbrains.com/zh-cn/webstorm/)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**VS Code**](https://code.visualstudio.com/)
+[![VS Code](/img/logo/Visual_Studio_Code_logo.svg)](https://code.visualstudio.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**Git**](https://git-scm.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;
