@@ -15,7 +15,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 [![VS Code](/img/logo/Visual_Studio_Code_logo.svg)](https://code.visualstudio.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**Git**](https://git-scm.com/)
+[![Git](/img/logo/Git-logo.svg)](https://git-scm.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**TortoiseSVN**](https://tortoisesvn.net/downloads.zh.html)
 
