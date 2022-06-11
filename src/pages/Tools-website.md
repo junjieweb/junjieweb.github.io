@@ -17,7 +17,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 [![Git](/img/logo/Git-logo.svg)](https://git-scm.com/)
 &nbsp;&nbsp;&nbsp;&nbsp;
-[**TortoiseSVN**](https://tortoisesvn.net/downloads.zh.html)
+[![TortoiseSVN](/img/logo/TortoiseSVN_logo.svg)](https://tortoisesvn.net/downloads.zh.html)
 
 ### 学习网站
 
