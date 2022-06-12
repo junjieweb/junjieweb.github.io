@@ -1,14 +1,6 @@
 # 工具网站
 
-[**Quick Reference 各类语言、工具速查**](https://quickref.me/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**AES 在线加密解密**](http://tool.chacuo.net/cryptaes)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**EmojiAll EMOJI复制和粘贴工具**](https://www.emojiall.com/zh-hans)
-
-## 前端
-
-### 前端开发工具下载
+## 前端开发工具下载
 
 [![WebStorm logo](/img/logo/WebStorm_icon.svg)](https://www.jetbrains.com/zh-cn/webstorm/)
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -20,7 +12,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
 [![NodeJS](/img/logo/Node.js_logo.svg)](https://nodejs.org/zh-cn/)
 
-### 学习网站
+## 学习网站
 
 [**Markdown 官方教程**](https://markdown.com.cn/)
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -35,8 +27,15 @@
 [**FreeCodeCamp**](https://chinese.freecodecamp.org/learn)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**现代 JavaScript 教程**](https://zh.javascript.info/)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**Quick Reference 各类语言、工具速查**](https://quickref.me/)
+&nbsp;&nbsp;&nbsp;&nbsp;
 
-### CSS工具
+[**AES 在线加密解密**](http://tool.chacuo.net/cryptaes)
+&nbsp;&nbsp;&nbsp;&nbsp;
+[**EmojiAll EMOJI复制和粘贴工具**](https://www.emojiall.com/zh-hans)
+
+## CSS工具
 
 [**选择器学习游戏**](https://flukeout.github.io/)
 &nbsp;&nbsp;&nbsp;&nbsp;
