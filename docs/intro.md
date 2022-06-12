@@ -382,7 +382,7 @@ This action is dangerous
 
 ### MDX 和 React 组件
 
-[MDX](https:mdxjs.com) 可以使您的文档更具交互性，并允许在 Markdown 中使用任何 React 组件：
+[MDX](https://mdxjs.com/) 可以使您的文档更具交互性，并允许在 Markdown 中使用任何 React 组件：
 
 ```mdx
 export const Highlight = ({children, color}) => (
