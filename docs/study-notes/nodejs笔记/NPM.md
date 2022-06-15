@@ -2,7 +2,9 @@
 sidebar_position: 2
 ---
 
-# NPM
+# 包管理器
+
+## NPM
 
 **NPM**(Node Package Manager), Node 的包管理器，也是一个应用程序。安装完 nodejs 之后会自动安装 npm。
 
@@ -88,4 +90,27 @@ npm install babel -D
     2. 修改 package.json 中版本号
     3. npm publish 提交
 
-删除NPM包 `npm unpublish 包名 --force`
+**删除NPM包** `npm unpublish 包名 --force`
+
+**npm配置镜像地址**
+
+```shell
+//淘宝镜像
+npm config set registry https://registry.npm.taobao.org
+//官方镜像   
+npm config set registry https://registry.npmjs.org/
+```
+
+:::tip
+在发布工具的时候, 一定要将仓库地址修改为官方的地址
+:::
+
+## CNPM
+
+cnpm 是淘宝对国外 npm 服务器的一个完整镜像版本，也就是淘宝 npm 镜像，网站地址 `http://npm.taobao.org/`
+
+**安装** `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+
+**使用** 配置完成后，就可以使用 cnpm 命令来管理包，使用方法跟 npm 一样 `cnpm install lodash`
+
+cnpm 安装时一定要加 -S 选项
