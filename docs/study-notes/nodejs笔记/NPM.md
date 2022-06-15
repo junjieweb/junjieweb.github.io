@@ -74,6 +74,26 @@ npm install babel -D
 3. 运行 `npm init` (只需要运行一次)
 4. 运行 `npm i 包名` 安装工具包
 
+**npm清除缓存**
+
+npm i 安装包错误的时候, 可以尝试运行 `npm cache clean`
+
+**使用npm执行脚本**
+
+1. 编写js脚本
+2. 配置package.json（如果没有package.json, 则运行 npm init）
+3. 添加script中的属性
+    ```json
+    {
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "node app.js"
+      }
+    }
+    ```
+4. 配置`package.json` 后就可以在命令行中使用 `npm run server` 运行 app.js
+
+
 **封装NPM包**（创建自己的 NPM 包可以帮助代码进行迭代进化，使用步骤也比较简单）
 
 1. 修改为官方的地址 `npm config set registry https://registry.npmjs.org/`
@@ -138,11 +158,11 @@ cnpm 安装时一定要加 -S 选项
 7. `yarn remove package`
 8. `yarn list` //列出已经安装的包名 用的很少
 9. `yarn info packageName` //获取包的有关信息 几乎不用
-10. `yarn` //安装package.json中的所有依赖 
+10. `yarn` //安装package.json中的所有依赖
 
 **yarn 修改仓库地址** `yarn config set registry https://registry.npm.taobao.org`
 
-## Cyarn 
+## Cyarn
 
 跟 npm 与 cnpm 的关系一样，可以为 yarn 设置国内的淘宝镜像，提升安装的速度。配置后，只需将yarn改为cyarn使用即可。
 
@@ -152,3 +172,12 @@ cnpm 安装时一定要加 -S 选项
 
 `package.json` 不是必须的，但是做项目的时候, 一定要有它。
 
+## 关于版本号
+
+版本格式：主版本号.次版本号.修订号
+
+- "^3.0.0" ：锁定主版本，以后安装包的时候，保证包是3.x.x版本，x默认取最新的。
+- "~3.2.x" ：锁定小版本，以后安装包的时候，保证包是3.1.x版本，x默认取最新的。
+- "3.1.1" ：锁定完整版本，以后安装包的时候，保证包必须是3.1.1版本。
+
+安装指定版本的工具包 `yarn add jquery@1.11.2`
