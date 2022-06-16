@@ -124,3 +124,120 @@ server.listen(80, function () {
     console.log('服务已经启动，端口 80 监听中.....');
 })
 ```
+
+- `request` 是对请求报文的封装对象
+- `response` 是对响应的封装对象
+- 计算的服务窗口 总共 65536 端口 HTTP服务常用端口 8000 3000 9000 8080
+- HTTP 默认端口 80
+- 获取本机IP：`ipconfig`
+
+#### 获取请求
+
+```javascript
+// 引入 http 模块
+const http = require('http');
+// 一、引入url模块
+const url = require('url');
+//调用方法，创建服务对象
+const server = http.createServer(function (request, response) {
+    // 获取请求报文中的内容
+    //1、请求的类型
+    console.log(request.method);
+    //2、请求的url
+    console.log(request.url);
+    //3、HTTP协议版本
+    console.log(request.httpVersion);
+    //4、获取url中的路径部分
+    //二、调用方法获取参数
+    console.log(url.parse(request.url).pathname);
+    //5、获取查询字符串
+    console.log(url.parse(request.url, true).query);
+    //6、获取请求头信息
+    console.log(request.headers);
+    response.end('HELLO');
+});
+// 监听端口，启动服务
+server.listen(80, function () {
+    console.log('服务已经启动，端口 80 监听中.....');
+});
+```
+
+#### 获取请求体
+
+```javascript
+// 引入 http 模块
+const http = require('http');
+//引入querystring模块
+const qs = require('querystring');
+// 调用方法，创建服务对象
+const server = http.createServer(function (request, response) {
+    //提取请求体数据  POST
+    //1、声明一个字符串变量
+    let body = '';
+    //2、绑定data事件
+    request.on("data", chunk => {
+        //拼接
+        body += chunk.toString();
+    });
+    //3、绑定end事件
+    request.on('end', () => {
+        console.log(body);
+        //调用qs对象的方法
+        console.log(qs.parse(body));
+        response.end('body server');
+    });
+});
+// 监听端口，启动服务
+server.listen(80, function () {
+    console.log('服务已经启动，端口 8000 监听中.....');
+});
+```
+
+#### 设置响应
+
+```javascript
+//设置状态码
+response.statusCode = 200;
+
+//设置响应头
+response.setHeader('content-type', 'text/html;charset-utf-8');
+
+//设置响应体
+response.write('body');
+
+//结束
+response.end();
+```
+
+## GET 和 POST 的区别
+
+GET 和 POST 是 HTTP 协议请求的两种方式
+
+GET 主要用来获取数据, POST 主要用来提交数据
+
+- GET 带参数请求是将参数缀到 URL 之后, 在地址栏输入url访问网站就是 GET 请求, POST 带参数请求是将参数放到请求体中
+- POST 请求相对 GET 安全一些, 因为在浏览器中参数会暴露在地址栏.
+- GET 请求大小有限制, 一般为 2k, 而 POST 请求则没有大小限制
+- GET 类型报文请求方法的位置为 GET , POST 类型报文请求方法为 POST
+
+## Chrome 查看请求报文
+
+![](./img/chrome查看http.png)
+
+## 附录
+
+### 响应状态码
+
+响应状态码是服务器对结果的标识，常见的状态码有以下几种：
+
+- 200：请求成功，浏览器会把响应体内容（通常是html）显示在浏览器中；
+- 301：重定向，被请求的旧资源永久移除了（不可以访问了），将会跳转到一个新资源，搜索引擎在抓取新内容的同时也将旧的网址替换为重定向之后的网址；
+- 302：重定向，被请求的旧资源还在（还可以访问），但会临时跳转到一个新资源，搜索引擎会抓取新的内容而保存旧的网址
+- 304：（Not Modified）请求资源未被修改，浏览器将会读取缓存；
+- 403：forbidden 禁止的
+- 404：请求的资源没有找到，说明客户端错误的请求了不存在的资源；
+- 500：请求资源找到了，但服务器内部出现了错误；
+
+### Sec-Fetch-* 请求头
+
+<https://www.w3.org/TR/fetch-metadata/#sec-fetch-mode-header>
