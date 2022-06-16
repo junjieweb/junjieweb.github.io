@@ -1,17 +1,5 @@
 # 工具网站
 
-## 前端开发工具下载
-
-[![WebStorm logo](/img/logo/WebStorm_icon.svg)](https://www.jetbrains.com/zh-cn/webstorm/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[![VS Code](/img/logo/Visual_Studio_Code_logo.svg)](https://code.visualstudio.com/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[![Git](/img/logo/Git-logo.svg)](https://git-scm.com/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[![TortoiseSVN](/img/logo/TortoiseSVN_logo.svg)](https://tortoisesvn.net/downloads.zh.html)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[![NodeJS](/img/logo/Node.js_logo.svg)](https://nodejs.org/zh-cn/)
-
 ## 学习网站
 
 [**Markdown 官方教程**](https://markdown.com.cn/)
