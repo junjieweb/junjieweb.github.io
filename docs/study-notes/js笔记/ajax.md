@@ -105,3 +105,75 @@ xhr.ontimeout = () => {
 **解决方式**：浏览器的ajax缓存是根据url地址来记录的，所以我们只需要修改url地址即可避免缓存问题。     
 `xhr.open('GET', 'http://127.0.0.1:8080/get_person?t=' + Date.now())`
 
+## Ajax 跨域
+
+跨域问题：原因是浏览器为了安全，而采用的同源策略（Same origin policy）
+
+### 同源策略
+
+同源策略是由Netscape提出的一个著名的安全策略，现在所有支持 JavaScript 的浏览器都会使用这个策略。
+Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。
+
+所谓同源是指：协议，域名（IP），端口必须要完全相同。即：**协议**、**域名（IP）**、**端口**都相同，才能算是在同一个域里。
+
+**非同源受到的限制：**
+
+1. Cookie不能读取；
+2. DOM无法获得；
+3. Ajax请求不能获取数据
+
+### 如何解决跨域问题
+
+#### JSONP解决发送请求跨域问题
+
+JSONP(JSON with Padding)，是一个非官方的跨域解决方案，纯粹凭借程序员的聪明才智开发出来，**只支持get请求**。
+JSONP不是一种技术，而是程序员“智慧的结晶”（利用了标签请求资源不受同源策略限制的特点）
+
+```html title="前端写法"
+<body>
+    <button id="btn">按钮</button>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.onclick = () => {
+            //1.创建script节点
+            const scriptNode = document.createElement('script');
+            //2.给节点指定src属性（请求地址）
+            scriptNode.src = 'http://127.0.0.1:8080/test_jsonp?callback=test';
+            //3.将节点放入页面
+            document.body.appendChild(scriptNode);
+            //4.准备好一个函数
+            window.test = (a) => {
+                console.log(a);
+            }
+            //5.移除已经使用过的script节点
+            document.body.removeChild(scriptNode);
+        }
+    </script>
+</body>
+```
+
+```javascript title="后端写法"
+app.get('/jsonp', (req, res) => {
+    //解构赋值获取请求参数
+    const {callback} = req.query
+    //去数据库查找对应数据
+    const data = [{name: 'tom', age: 18}, {name: 'jerry', age: 20}];
+    res.send(callback + '(' + JSON.stringify(data) + ')');
+})
+```
+
+#### 后台配置cors解决跨域
+
+CORS（Cross-Origin Resource Sharing），跨域资源共享。CORS是官方的跨域解决方案，
+它的特点是**不需要在客户端做任何特殊的操作，完全在服务器中进行处理**，支持所有常见的请求。
+
+CORS是通过设置一个响应头来告诉浏览器，该请求允许跨域，浏览器收到该响应以后就会对响应放行。
+
+```javascript
+// 以Node为例：
+res.set('Access-Control-Allow-Origin', 'http://localhost:63342');
+```
+
+#### 使用脚手架代理服务器
+
+例如：React脚手架、Vue脚手架
