@@ -35,5 +35,49 @@ MongoDB 是为快速开发互联网 Web 应用而设计的数据库系统，官�
 
 ![](./img/mongodb.png)
 
+### 常用命令
+
+#### 数据库集合命令
+
+操作集合时，如果集合不存在则会自动创建集合
+
+1. 显示所有的数据库 `show dbs` 或 `show databases`
+2. （创建）切换到指定的数据库 `use 数据库名`
+3. 显示当前所在的数据库 `db`
+4. 删除当前数据库（先切换再删除） `use project_1` `db.dropDatabase()`
+5. 显示当前数据库中的所有集合 `db.createCollection('user'); //创建集合` `show collections`
+6. 删除当前集合 `db.collection.drop() // db.集合名称.drop()`
+7. 重命名集合 `db.collection.renameCollection('newName')`
+
+#### 文档命令
+
+**插入文档** `db.collection.insert(文档对象); // db.集合名称.insert`
+
+**查询文档** `db.collection.find(查询条件)` `db.collection.findOne(查询条件)`
+
+**更新文档**
+
+```shell
+db.collection.update(查询条件,新的文档,配置对象)   
+# 更新一个
+db.collection.updateOne(查询条件,要更新的内容[,配置对象]) 
+# 批量更新
+db.collection.updateMany(查询条件,要更新的内容[,配置对象])
+# eg
+db.students.update({name:'xiaohigh'},{$set:{age:19}})
+# 配置对象
+{
+    # 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入
+    upsert: <boolean>,   
+    # 可选，mongodb 默认是false,只更新找到的第一条记录，如果为true, 就把按条件查出来多条记录全部更新
+    multi: <boolean>
+}
+```
+
+**删除文档** `db.collection.remove(查询条件)`
+
+#### 条件控制
+
+
 
 
