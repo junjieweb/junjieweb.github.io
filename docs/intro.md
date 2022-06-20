@@ -7,17 +7,11 @@ slug: intro
 
 ## 快速开始
 
-边玩边学 Docusaurus，仅需 5 分钟！
-
-安装 Node.js，并创建新的 Docusaurus 站点：
-
-```
-npx create-docusaurus@latest my-website classic
-```
+安装 Node.js，并创建新的 Docusaurus 站点：`npx create-docusaurus@latest my-website classic`
 
 运行网站：
 
-```
+```shell
 cd my-website
 npx docusaurus start
 ```
