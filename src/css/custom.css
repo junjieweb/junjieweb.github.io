@@ -68,4 +68,18 @@ div[class^='announcementBar_'] {
 /* 右侧侧边栏选中样式 */
 .table-of-contents__link--active {
     background-color: rgba(0, 0, 0, .05);
+    border-left: 4px solid var(--ifm-color-primary-light);
+    color: var(--ifm-color-primary);
+    font-weight: 500;
+    margin-left: -16px;
+    padding-left: 12px;
+}
+
+/* 左侧侧边栏选中样式 */
+.menu__link--active {
+    background: var(--ifm-color-primary);
+    border-left-style: solid;
+    border-left-width: 4px;
+    padding-left: 8px !important;
+    border-left-color: var(--ifm-color-primary) !important;
 }
