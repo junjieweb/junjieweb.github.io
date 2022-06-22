@@ -7,18 +7,23 @@ sidebar_position: 1
 ## 什么是 JavaScript?
 
 **`JavaScript`**
-是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如拥有复杂的动画，可点击的按钮，通俗的菜单等）。另外还有高级的服务端`Javascript`版本，例如`Node.js`
+是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如拥有复杂的动画，可点击的按钮，通俗的菜单等）。另外还有高级的服务端`Javascript`
+版本，例如`Node.js`
 ，它可以让你在网页上添加更多功能，不仅仅是下载文件（例如在多台电脑之间的协同合作）。在宿主环境（例如
 web 浏览器）中， JavaScript 能够通过其所连接的环境提供的编程接口进行控制。
 
 **`JavaScript`** 内置了一些对象的标准库，比如数组（`Array`），日期（`Date`），数学（`Math`）和一套核心语句，包括运算符、流程控制符以及声明方式等。JavaScript
 的核心部分可以通过添加对象来扩展语言以适应不同用途；例如：
 
-- 客户端的 JavaScript 通过提供对象，控制浏览器及其文档对象模型（DOM），来扩展语言核心。例如：客户端的拓展代码允许应用程序将元素放在某个 HTML 表单中，并且支持响应用户事件，比如鼠标点击、表单提交和页面导航。
-- 服务端的 JavaScript 则通过提供有关在服务器上运行 JavaScript 的对象来可扩展语言核心。例如：服务端版本直接支持应用和数据库通信，提供应用不同调用间的信息连续性，或者在服务器上执行文件操作。
+- 客户端的 JavaScript 通过提供对象，控制浏览器及其文档对象模型（DOM），来扩展语言核心。例如：客户端的拓展代码允许应用程序将元素放在某个
+  HTML 表单中，并且支持响应用户事件，比如鼠标点击、表单提交和页面导航。
+- 服务端的 JavaScript 则通过提供有关在服务器上运行 JavaScript
+  的对象来可扩展语言核心。例如：服务端版本直接支持应用和数据库通信，提供应用不同调用间的信息连续性，或者在服务器上执行文件操作。
 
-这意味着，在浏览器中，JavaScript 可以改变网页（DOM）的外观与样式。同样地，在服务器上，Node.js 中的 JavaScript 可以对浏览器上编写的代码发出的客户端请求做出响应。
+这意味着，在浏览器中，JavaScript 可以改变网页（DOM）的外观与样式。同样地，在服务器上，Node.js 中的 JavaScript
+可以对浏览器上编写的代码发出的客户端请求做出响应。
 
+<!--
 **`JavaScript ( JS )`** 是一种具有[函数优先](https://developer.mozilla.org//docs/Glossary/First-class_Function)
 的轻量级，解释型或即时编译型的编程语言。虽然它是作为开发Web
 页面的脚本语言而出名的，但是它也被用到了很多[非浏览器环境](https://en.wikipedia.org/wiki/JavaScript#Uses_outside_Web_pages)
@@ -35,14 +40,15 @@ ECMAScript 6 或者 ES6。自此，ECMAScript 每年发布一次新标准。
 
 **`ECMAScript`**是形成[JavaScript](https://developer.mozilla.org/zh-CN/JavaScript)
 语言基础的脚本语言。ECMAScript是由[Ecma国际](https://www.ecma-international.org/)标准组织以**ECMA-262和ECMA-402规范**的形式进行标准化的。
+-->
 
 ## JS 的编写位置
 
-1. 编写到script标签中：`<script>JS代码</script>`
+1. **编写到script标签中**：`<script>JS代码</script>`
 
-2. 编写到外部的js文件中：`<script src="xxx.js"></script>`
+2. **编写到外部的js文件中**：`<script src="xxx.js"></script>`
 
-3. 编写到标签的指定属性中：`<button onclick="js代码"></button>` `<a href="javascript:js代码"></a>`
+3. **编写到标签的指定属性中**：`<button onclick="js代码"></button>` `<a href="javascript:js代码"></a>`
 
 ## JS 基本语法
 
@@ -68,11 +74,11 @@ ECMAScript 6 或者 ES6。自此，ECMAScript 每年发布一次新标准。
 
 ## 交互
 
-1. 警告框：`alert('Hello World');`
-2. 控制台打印：`console.log('Hello World');`
-3. 网页中打印：`document.write('Hello World');`
-4. 显示信息等待用户点击确定或取消：
-    - `result = confirm(question);`点击确定返回 `true`，点击取消返回 `false`。
+1. **警告框**：`alert('Hello World');`
+2. **控制台打印**：`console.log('Hello World');`
+3. **网页中打印**：`document.write('Hello World');`
+4. **显示信息等待用户点击确定或取消**：
+    - `result = confirm(question);` 点击确定返回 `true`，点击取消返回 `false`。
 
 ## 数据类型
 
@@ -170,7 +176,8 @@ ECMAScript 6 或者 ES6。自此，ECMAScript 每年发布一次新标准。
 
 `>` `>=` `<` `<=` 规则同数学运算
 
-> 如果比较两个字符串的大小关系，它不会将字符串转换为数值去比较，而是逐位的比较字符的`Unicode`编码，所以利用这个特性可以通过比较字符串大小，来将字符串按照字母顺序排序
+> 如果比较两个字符串的大小关系，它不会将字符串转换为数值去比较，而是逐位的比较字符的`Unicode`
+> 编码，所以利用这个特性可以通过比较字符串大小，来将字符串按照字母顺序排序
 
 #### 相等运算符
 
@@ -208,7 +215,8 @@ ECMAScript 6 或者 ES6。自此，ECMAScript 每年发布一次新标准。
 
 #### `if...else`
 
-`if`语句计算括号里的条件表达式，如果计算结果是 true，就会执行对应的代码块。当这个条件为假，使用可选择的 `else` 从句来执行这个语句。也可以组合语句通过使用 `else if` 来测试连续多种条件判断。
+`if`语句计算括号里的条件表达式，如果计算结果是 true，就会执行对应的代码块。当这个条件为假，使用可选择的 `else`
+从句来执行这个语句。也可以组合语句通过使用 `else if` 来测试连续多种条件判断。
 if 语句如下所示：
 
 ```javascript
@@ -225,7 +233,8 @@ if (condition_1) {
 
 #### `switch`
 
-`switch` 语句允许一个程序求一个表达式的值并且尝试去匹配表达式的值到一个 `case` 标签。如果匹配成功，这个程序执行相关的语句。`switch` 语句如下所示：
+`switch` 语句允许一个程序求一个表达式的值并且尝试去匹配表达式的值到一个 `case`
+标签。如果匹配成功，这个程序执行相关的语句。`switch` 语句如下所示：
 
 ```javascript
 switch (expression) {
@@ -241,10 +250,13 @@ switch (expression) {
 }
 ```
 
-程序首先查找一个与 `expression `匹配的 `case `语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值， 程序会去找 `default `
-语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 `default`，程序会继续执行 `switch `语句后面的语句。`default` 语句通常出现在switch语句里的最后面，当然这不是必须的。
+程序首先查找一个与 `expression `匹配的 `case `语句，然后将控制权转移到该子句，执行相关的语句。如果没有匹配值，
+程序会去找 `default `
+语句，如果找到了，控制权转移到该子句，执行相关的语句。如果没有找到 `default`，程序会继续执行 `switch `
+语句后面的语句。`default` 语句通常出现在switch语句里的最后面，当然这不是必须的。
 
-`可选的 break` 语句与每个 `case` 语句相关联， 保证在匹配的语句被执行后程序可以跳出 `switch `并且继续执行 `switch` 后面的语句。如果`break`被忽略，则程序将继续执行switch语句中的下一条语句。
+`可选的 break` 语句与每个 `case` 语句相关联， 保证在匹配的语句被执行后程序可以跳出 `switch `并且继续执行 `switch`
+后面的语句。如果`break`被忽略，则程序将继续执行switch语句中的下一条语句。
 
 ### 循环与迭代
 
@@ -264,7 +276,8 @@ for ([initialExpression]; [condition]; [incrementExpression]) {
 当一个 `for` 循环执行的时候，会发生以下过程：
 
 1. 如果有初始化表达式 `initialExpression`，它将被执行。这个表达式通常会初始化一个或多个循环计数器，但语法上是允许一个任意复杂度的表达式的。这个表达式也可以声明变量。
-2. 计算 `condition` 表达式的值。如果 `condition` 的值是 true，循环中的语句会被执行。如果 `condition` 的值是 false，`for` 循环终止。如果 `condition`
+2. 计算 `condition` 表达式的值。如果 `condition` 的值是 true，循环中的语句会被执行。如果 `condition` 的值是 false，`for`
+   循环终止。如果 `condition`
    表达式整个都被省略掉了，condition的值会被认为是true。
 3. 循环中的 `statement` 被执行。如果需要执行多条语句，可以使用块（`{ ... }`）来包裹这些语句。
 4. 如果有更新表达式 `incrementExpression`，执行更新表达式。
@@ -295,13 +308,15 @@ while (condition) {
 
 如果这个条件变为假，循环里的 `statement` 将会停止执行并把控制权交回给 `while` 语句后面的代码。
 
-条件检测会在每次 `statement` 执行之前发生。如果条件返回为真， `statement` 会被执行并紧接着再次测试条件。如果条件返回为假，执行将停止并把控制权交回给 while 后面的语句。
+条件检测会在每次 `statement` 执行之前发生。如果条件返回为真， `statement` 会被执行并紧接着再次测试条件。如果条件返回为假，执行将停止并把控制权交回给
+while 后面的语句。
 
 #### `label` `break` `continue`
 
 **`label`**
 
-一个 `label` 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 `label` 标识一个循环， 然后使用 `break` 或者 `continue` 来指出程序是否该停止循环还是继续循环。
+一个 `label` 提供了一个让你在程序中其他位置引用它的标识符。例如，你可以用 `label` 标识一个循环， 然后使用 `break`
+或者 `continue` 来指出程序是否该停止循环还是继续循环。
 
 label 语句的语法看起来像这样：
 
@@ -325,7 +340,8 @@ label :
 break [label];
 ```
 
-在语法中，被 `[]` 包裹的内容是可省略的，也就是 `label` 可以省略。若省略，则终止当前所在的循环或 `switch`；若不省略，则终止指定的 label 语句。
+在语法中，被 `[]` 包裹的内容是可省略的，也就是 `label` 可以省略。若省略，则终止当前所在的循环或 `switch`；若不省略，则终止指定的
+label 语句。
 
 **`continue`**
 
@@ -360,7 +376,8 @@ for (variable of object) {
 }
 ```
 
-下面的这个例子展示了 `for...of` 和 `for...in` 两种循环语句之间的区别。 `for...in` 循环遍历的结果是数组元素的下标，而 `for...of` 遍历的结果是元素的值：
+下面的这个例子展示了 `for...of` 和 `for...in` 两种循环语句之间的区别。 `for...in`
+循环遍历的结果是数组元素的下标，而 `for...of` 遍历的结果是元素的值：
 
 ```javascript
 let arr = [3, 5, 7];
