@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
+    # 如果您想进一步定义触发器、路径等，请查看 gh 操作文档
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
@@ -23,18 +23,18 @@ jobs:
       - name: Build website
         run: npm run build
 
-      # Popular action to deploy to GitHub Pages:
+      # 部署到 GitHub Pages 的常用操作：
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Build output to publish to the `gh-pages` branch:
+          # 构建输出以发布到 `gh-pages` 分支：
           publish_dir: ./build
-          # The following lines assign commit authorship to the official
-          # GH-Actions bot for deploys to `gh-pages` branch:
+          # 以下几行将提交作者身份分配给官方
+          # 用于部署到 `gh-pages` 分支的 GH-Actions 机器人：
           # https://github.com/actions/checkout/issues/13#issuecomment-724415212
-          # The GH actions bot is used by default if you didn't specify the two fields.
-          # You can swap them out with your own user credentials.
+          # 如果您未指定这两个字段，则默认使用 GH 操作机器人。
+          # 您可以将它们换成您自己的用户凭据。
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
