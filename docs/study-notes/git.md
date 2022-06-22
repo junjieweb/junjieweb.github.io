@@ -8,7 +8,8 @@ sidebar_position: 7
 
 Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种项目。
 
-Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作流分支等特性。其性能优于 Subversion、CVS、Perforce 和 ClearCase 等版本控制工具。
+Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作流分支等特性。其性能优于
+Subversion、CVS、Perforce 和 ClearCase 等版本控制工具。
 
 版本控制系统在项目开发中作用重大，主要的功能有以下几点:
 
@@ -73,19 +74,19 @@ Git、Mercurial、Bazaar、Darcs...
 
 ### [Commit types](https://github.com/pvdlg/conventional-changelog-metahub#commit-types)
 
-| Commit Type | Title                    | Description                                                                                                 | Emoji | Release                        | Include in changelog |
-|:-----------:|--------------------------|-------------------------------------------------------------------------------------------------------------|:-----:|--------------------------------|:--------------------:|
-|   `feat`    | Features                 | A new feature                                                                                               |   ✨   | `minor`                        |        `true`        |
-|    `fix`    | Bug Fixes                | A bug Fix                                                                                                   |  🐛   | `patch`                        |        `true`        |
-|   `docs`    | Documentation            | Documentation only changes                                                                                  |  📚   | `patch` if `scope` is `readme` |        `true`        |
-|   `style`   | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |  💎   | -                              |        `true`        |
-| `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   |  📦   | -                              |        `true`        |
-|   `perf`    | Performance Improvements | A code change that improves performance                                                                     |  🚀   | `patch`                        |        `true`        |
-|   `test`    | Tests                    | Adding missing tests or correcting existing tests                                                           |  🚨   | -                              |        `true`        |
-|   `build`   | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |  🛠   | `patch`                        |        `true`        |
-|    `ci`     | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |  ⚙️   | -                              |        `true`        |
-|   `chore`   | Chores                   | Other changes that don't modify src or test files                                                           |  ♻️   | -                              |        `true`        |
-|  `revert`   | Reverts                  | Reverts a previous commit                                                                                   |  🗑   | -                              |        `true`        |
+| Commit Type | Title                             | Description                                                                                                                                     | Emoji | Release                        | Include in changelog |
+|:-----------:|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|:-----:|--------------------------------|:--------------------:|
+|   `feat`    | Features                          | A new feature                                                                                                                                   |   ✨   | `minor`                        |        `true`        |
+|    `fix`    | Bug Fixes <br/>Bug 修复             | A bug Fix                                                                                                                                       |  🐛   | `patch`                        |        `true`        |
+|   `docs`    | Documentation <br/>文档             | Documentation only changes <br/>仅文档更改                                                                                                           |  📚   | `patch` if `scope` is `readme` |        `true`        |
+|   `style`   | Styles                            | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)<br/>不影响代码含义的更改（空格、格式、缺少分号等）              |  💎   | -                              |        `true`        |
+| `refactor`  | Code Refactoring<br/>代码重构         | A code change that neither fixes a bug nor adds a feature<br/>既不修复错误也不添加功能的代码更改                                                                 |  📦   | -                              |        `true`        |
+|   `perf`    | Performance Improvements<br/>性能改进 | A code change that improves performance<br/>提高性能的代码更改                                                                                           |  🚀   | `patch`                        |        `true`        |
+|   `test`    | Tests<br/>测试                      | Adding missing tests or correcting existing tests<br/>添加缺失的测试或纠正现有的测试                                                                           |  🚨   | -                              |        `true`        |
+|   `build`   | Builds<br/>构建                     | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)<br/>影响构建系统或外部依赖项的更改（示例范围：gulp、broccoli、npm） |  🛠   | `patch`                        |        `true`        |
+|    `ci`     | Continuous Integrations           | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)                                     |  ⚙️   | -                              |        `true`        |
+|   `chore`   | Chores                            | Other changes that don't modify src or test files<br/>不修改 src 或测试文件的其他更改                                                                        |  ♻️   | -                              |        `true`        |
+|  `revert`   | Reverts<br/>还原                    | Reverts a previous commit <br/>恢复之前的提交                                                                                                          |  🗑   | -                              |        `true`        |
 
 ## .git 目录信息
 
@@ -210,7 +211,8 @@ git 会默认忽略空文件夹
 
 ## 冲突
 
-当多个分支修改同一个文件后，合并分支的时候就会产生冲突。冲突的解决非常简单，『将内容修改为最终想要的结果』，然后继续执行 git add 与 git commit 就可以了。
+当多个分支修改同一个文件后，合并分支的时候就会产生冲突。冲突的解决非常简单，『将内容修改为最终想要的结果』，然后继续执行 git
+add 与 git commit 就可以了。
 
 1. `git status` 定位有冲突的文件
 2. 修改冲突文件的内容，为最终正确的样子
