@@ -4,24 +4,6 @@
 
 主要记录了一些个人的前端笔记，以及收集的一些前端面试题。
 
-### 网站部分截图
-
-#### 首页
-
-![](static/img/README/首页.png)
-
-#### 网站导航
-
-![](static/img/README/网站导航.png)
-
-#### 笔记
-
-![](static/img/README/笔记.png)
-
-#### 面试题
-
-![](static/img/README/面试题.png)
-
 ### 安装
 
 ```
@@ -59,3 +41,21 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 如果您使用 GitHub 页面进行托管，此命令是构建网站并推送到 `gh-pages` 分支的便捷方式。
+
+### 网站部分截图
+
+#### 首页
+
+![](static/img/README/首页.png)
+
+#### 网站导航
+
+![](static/img/README/网站导航.png)
+
+#### 笔记
+
+![](static/img/README/笔记.png)
+
+#### 面试题
+
+![](static/img/README/面试题.png)
