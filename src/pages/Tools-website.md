@@ -15,13 +15,12 @@
 [**FreeCodeCamp**](https://chinese.freecodecamp.org/learn)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**现代 JavaScript 教程**](https://zh.javascript.info/)
-&nbsp;&nbsp;&nbsp;&nbsp;
-[**Quick Reference 各类语言、工具速查**](https://quickref.me/)
-&nbsp;&nbsp;&nbsp;&nbsp;
 
 [**AES 在线加密解密**](http://tool.chacuo.net/cryptaes)
 &nbsp;&nbsp;&nbsp;&nbsp;
 [**EmojiAll EMOJI复制和粘贴工具**](https://www.emojiall.com/zh-hans)
+
+[**Quick Reference 各类语言、工具速查**](https://quickref.me/)
 
 ## CSS工具
 
