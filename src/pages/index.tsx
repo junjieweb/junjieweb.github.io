@@ -1,10 +1,10 @@
 import React from 'react';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+// import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Languages from "@site/src/components/Languages";
 import Translate, {translate} from '@docusaurus/Translate';
 import useBaseUrl, {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
@@ -39,7 +39,6 @@ function HomepageHeader() {
                     />
                     <span
                         className={styles.heroTitleTextHtml}
-                        // eslint-disable-next-line react/no-danger
                         dangerouslySetInnerHTML={{
                             __html: translate({
                                 id: 'homepage.hero.title',
@@ -52,7 +51,7 @@ function HomepageHeader() {
                     />
                 </h1>
                 <div className={styles.indexCtas}>
-                        <Link className="button button--primary" to="/docs/MDN">
+                    <Link className="button button--primary" to="/docs/MDN">
                         <Translate>前端笔记</Translate>
                     </Link>
                     <Link className="button button--info" to="/website">
