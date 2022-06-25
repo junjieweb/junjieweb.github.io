@@ -76,7 +76,8 @@ const config = {
             },
             announcementBar: {
                 id: 'announcementBar-2', // Increment on change
-                content: `⭐️ If you like this site, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/junjieweb/junjieweb.github.io">GitHub</a>`,
+                // content: `⭐️ If you like this site, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/junjieweb/junjieweb.github.io">GitHub</a>`,
+                content: `⭐️ 如果你喜欢这个网站，在 <a style="color: red" target="_blank" rel="noopener noreferrer" href="https://github.com/junjieweb/junjieweb.github.io">GitHub</a> 上给它一颗 ⭐ `,
                 // isCloseable: false, // 是否可关闭
             },
             // image: 'img/docusaurus-soc.png',
