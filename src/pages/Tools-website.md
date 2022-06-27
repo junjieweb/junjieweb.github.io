@@ -22,6 +22,8 @@
 
 [**Quick Reference 各类语言、工具速查**](https://quickref.me/)
 
+[**JetBrains Academy 与 JetBrains IDE 集成的动手学习平台**](https://hyperskill.org/join/1ffe05030)
+
 ## CSS工具
 
 [**选择器学习游戏**](https://flukeout.github.io/)
