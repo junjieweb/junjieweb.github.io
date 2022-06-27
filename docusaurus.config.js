@@ -124,7 +124,7 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'Docs',
+                        title: '文档',
                         items: [
                             {
                                 label: '笔记',
@@ -138,10 +138,14 @@ const config = {
                                 label: '网站导航',
                                 to: '/website',
                             },
+                            {
+                                label: '工具网站',
+                                to: '/Tools-website',
+                            },
                         ],
                     },
                     {
-                        title: 'Community',
+                        title: '社区',
                         items: [
                             {
                                 label: 'Stack Overflow',
@@ -155,22 +159,22 @@ const config = {
                                 label: 'Discord',
                                 href: 'https://discordapp.com/invite/docusaurus',
                             },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
                         ],
                     },
                     {
-                        title: 'More',
+                        title: '更多',
                         items: [
                             {
-                                label: 'Blog',
+                                label: '博客',
                                 to: '/blog',
                             },
                             {
                                 label: 'GitHub',
                                 href: 'https://github.com/junjieweb',
+                            },
+                            {
+                                label: 'JetBrains Academy',
+                                href: 'https://hyperskill.org/join/1ffe05030',
                             },
                         ],
                     },
