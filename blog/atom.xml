@@ -51,6 +51,14 @@
         <category label="Git" term="Git"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[WebStorm 键盘快捷键]]></title>
+        <id>/2021/09/03/WebStorm键盘快捷键</id>
+        <link href="https://junjieweb.github.io/blog/2021/09/03/WebStorm键盘快捷键"/>
+        <updated>2021-09-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[| 快捷键                     | 作用                                                                                                                                           |]]></summary>
+        <content type="html"><![CDATA[<table><thead><tr><th>快捷键</th><th>作用</th></tr></thead><tbody><tr><td>双倍的Shift</td><td><a href="https://www.jetbrains.com/help/webstorm/searching-everywhere.html" target="_blank" rel="noopener noreferrer">随处搜索</a><br>在 WebStorm、您的项目和当前 Git 存储库中快速查找任何文件、操作、类、符号、工具窗口或设置。</td></tr><tr><td>Ctrl+Shift+A</td><td><a href="https://www.jetbrains.com/help/webstorm/searching-everywhere.html#find_action" target="_blank" rel="noopener noreferrer">寻找行动</a><br>查找命令并执行它、打开工具窗口或搜索设置。</td></tr><tr><td>双倍的Ctrl</td><td>运行任何东西<br>启动运行/调试配置，运行 npm 和 yarn 脚本，并重新打开最近的项目。</td></tr><tr><td>Alt+Enter</td><td><a href="https://www.jetbrains.com/help/webstorm/intention-actions.html" target="_blank" rel="noopener noreferrer">显示上下文操作</a><br>快速修复突出显示的错误和警告，改进和优化代码的意图操作。</td></tr><tr><td>F2<br>Shift+F2</td><td><a href="https://www.jetbrains.com/help/webstorm/navigating-through-the-source-code.html#navigate-errors-warnings" target="_blank" rel="noopener noreferrer">在代码问题之间导航</a><br>跳转到下一个或上一个突出显示的错误。</td></tr><tr><td>Ctrl+E</td><td><a href="https://www.jetbrains.com/help/webstorm/navigating-through-the-source-code.html#recent_files" target="_blank" rel="noopener noreferrer">查看最近的文件</a><br>从列表中选择最近打开的文件。</td></tr><tr><td>Ctrl+W<br>Ctrl+Shift+W</td><td><a href="https://www.jetbrains.com/help/webstorm/working-with-source-code.html" target="_blank" rel="noopener noreferrer">扩展或缩小选择</a><br>根据特定的代码结构增加或减少选择范围。</td></tr><tr><td>Ctrl+/<br>Ctrl+Shift+/</td><td><a href="https://www.jetbrains.com/help/webstorm/working-with-source-code.html#editor_lines_code_blocks" target="_blank" rel="noopener noreferrer">添加/删除行或块注释</a><br>注释掉一行或一段代码。</td></tr><tr><td>Alt+F7</td><td><a href="https://www.jetbrains.com/help/webstorm/find-highlight-usages.html#find-usages" target="_blank" rel="noopener noreferrer">查找用法</a><br>显示整个项目中使用代码元素的所有位置。</td></tr></tbody></table>]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Web开发简介]]></title>
         <id>Web开发</id>
         <link href="https://junjieweb.github.io/blog/Web开发"/>
