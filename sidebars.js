@@ -28,6 +28,7 @@ const sidebars = {
     ],
      */
     docs: [
+        '编程简介',
         'MDN',
         'MDN-line',
         {
