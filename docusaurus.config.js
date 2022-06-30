@@ -92,8 +92,14 @@ const config = {
                 },
                 items: [
                     {
+                        type: 'docSidebar',
+                        sidebarId: 'Knowledge_map',
+                        position: 'left',
+                        label: '🗺️知识图谱',
+                    },
+                    {
                         type: 'doc',
-                        docId: '编程简介',
+                        docId: 'MDN',
                         position: 'left',
                         label: '📒前端笔记',
                     },
