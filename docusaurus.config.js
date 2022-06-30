@@ -92,12 +92,6 @@ const config = {
                 },
                 items: [
                     {
-                        type: 'docSidebar',
-                        sidebarId: 'Knowledge_map',
-                        position: 'left',
-                        label: '🗺️知识图谱',
-                    },
-                    {
                         type: 'doc',
                         docId: 'MDN',
                         position: 'left',
