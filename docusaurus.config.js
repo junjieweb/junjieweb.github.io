@@ -93,7 +93,7 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'MDN',
+                        docId: '编程简介',
                         position: 'left',
                         label: '📒前端笔记',
                     },
