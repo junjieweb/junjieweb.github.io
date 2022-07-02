@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 // import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Languages from "@site/src/components/Languages";
+import LanguagesAndTools from "@site/src/components/LanguagesAndTools";
 import Translate, {translate} from '@docusaurus/Translate';
 import useBaseUrl, {useBaseUrlUtils} from '@docusaurus/useBaseUrl';
 
@@ -81,7 +81,7 @@ export default function Home(): JSX.Element {
             <HomepageHeader/>
             <main>
                 {/*<HomepageFeatures/>*/}
-                <Languages></Languages>
+                <LanguagesAndTools></LanguagesAndTools>
             </main>
         </Layout>
     );

@@ -29,12 +29,15 @@ export default function Languages(): JSX.Element {
                 <img className={styles.img} src="/img/logo/ps_appicon.svg" alt="PhotoShop"/>
                 <hr/>
                 <h2>特别鸣谢</h2>
-                <h2><a href="https://www.jetbrains.com/zh-cn/community/opensource/#support" target={'_blank'}>开源开发许可证 -
-                    社区支持</a></h2>
+                <h2>
+                    <a href="https://www.jetbrains.com/zh-cn/community/opensource/#support" target={'_blank'}>
+                        开源开发许可证 - 社区支持</a>
+                </h2>
                 <h3>JetBrains 通过为核心项目贡献者免费提供一套一流的开发者工具来支持非商业开源项目。</h3>
                 <h3>获取所有 JetBrains 工具的免费访问权限，开发您的开源项目！</h3>
                 <img src="/img/logo/jb_beam.svg" alt="JetBrains Logo (Main) logo"/>
                 <img src="/img/logo/WebStorm.svg" alt="WebStorm logo"/>
             </div>
-        </section>)
+        </section>
+    )
 }
