@@ -37,6 +37,12 @@ GitHub 远程仓库使用流程较为简单，主要有以下几种场景：
 5. 本地提交（确认代码已经提交到本地仓库）
 6. 将本地仓库内容推送到远程仓库 `git push -u origin main` 提交添加 `-u` 之后，后续提交时可以不需要再添加别名与分支名
 
+```shell
+git remote add origin <GitHub仓库地址>
+git branch -M main
+git push -u origin main
+```
+
 ### 本地没有仓库
 
 1. 注册并激活账号
@@ -44,6 +50,16 @@ GitHub 远程仓库使用流程较为简单，主要有以下几种场景：
 3. 增加和修改代码
 4. 本地提交 `git add -A` `git commit -m '注释'`
 5. 推送到远程 `git push`
+
+```shell title="在命令行创建一个新的仓库"
+echo "# <GitHub仓库名字>" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin <GitHub仓库地址>
+git push -u origin main
+```
 
 ### 多人合作
 
