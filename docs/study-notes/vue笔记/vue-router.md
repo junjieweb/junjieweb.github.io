@@ -106,7 +106,7 @@ sidebar_position: 4
      path:'/home/message/detail',
      query:{
         id:666,
-               title:'你好'
+        title:'你好'
      }
     }"
    >跳转</router-link>
@@ -137,7 +137,7 @@ sidebar_position: 4
           component:Test,
           children:[
            {
-                             name:'hello' //给路由命名
+            name:'hello', //给路由命名
             path:'welcome',
             component:Hello,
            }
@@ -162,7 +162,7 @@ sidebar_position: 4
          name:'hello',
          query:{
             id:666,
-                   title:'你好'
+            title:'你好'
          }
         }"
        >跳转</router-link>
@@ -207,7 +207,7 @@ sidebar_position: 4
      name:'xiangqing',
      params:{
         id:666,
-               title:'你好'
+        title:'你好'
      }
     }"
    >跳转</router-link>
@@ -224,18 +224,13 @@ sidebar_position: 4
 
 ### 7.路由的props配置
 
-​ 作用：让路由组件更方便的收到参数
+作用：让路由组件更方便的收到参数
 
 ```js
 {
     name:'xiangqing',
-        path
-:
-    'detail/:id',
-        component
-:
-    Detail,
-
+    path:'detail/:id',
+    component:Detail,
         //第一种写法：props值为对象，该对象中所有的key-value的组合最终都会通过props传给Detail组件
         // props:{a:900}
 
