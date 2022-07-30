@@ -51,7 +51,8 @@ Accept-Language: zh-CN,zh;q=0.9
 * `Cache-Control: no-cache`： 不缓存该资源 http 1.1的规定，优先级更高
 * `Upgrade-Insecure-Requests: 1`：告诉服务器，支持发请求的时候不用 http 而用 https
 * `User-Agent: Mozilla/5.0 (...`：与浏览器和OS相关的信息。有些网站会显示用户的系统版本和浏览器版本信息，这都是通过获取User-Agent头信息而来的
-* `Accept: text/html,...`：告诉服务器，当前客户端可以接收的文档类型。q 相当于描述了客户端对于某种媒体类型的喜好系数，该值的范围是 0-1。默认为1
+* `Accept: text/html,...`：告诉服务器，当前客户端可以接收的文档类型。q 相当于描述了客户端对于某种媒体类型的喜好系数，该值的范围是
+  0-1。默认为1
 * `Accept-Encoding: gzip, deflate, br`：支持的压缩格式。数据在网络上传递时，服务器会把数据压缩后再发送
 * `Accept-Language: zh-CN,zh;q=0.9`：当前客户端支持的语言，可以在浏览器的工具选项中找到语言相关信息
 
