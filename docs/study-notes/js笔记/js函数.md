@@ -27,7 +27,8 @@ function square(number) {
 }
 ```
 
-函数`square`使用了一个参数，叫作`number`。这个函数只有一个语句，它说明该函数将函数的参数（即`number`）自乘后返回。函数的`return`语句确定了函数的返回值
+函数`square`使用了一个参数，叫作`number`。这个函数只有一个语句，它说明该函数将函数的参数（即`number`
+）自乘后返回。函数的`return`语句确定了函数的返回值
 
 原始参数（比如一个具体的数字）被作为值传递给函数；值被传递给函数，如果被调用函数改变了这个参数的值，这样的改变不会影响到全局或调用函数。
 
@@ -43,7 +44,8 @@ const square = function (number) {
 
 ## 调用函数
 
-定义一个函数并不会自动的执行它。定义了函数仅仅是赋予函数以名称并明确函数被调用时该做些什么。**调用**函数才会以给定的参数真正执行这些动作。例如，一旦你定义了函数`square`，你可以如下这样调用它：
+定义一个函数并不会自动执行它。定义了函数仅仅是赋予函数以名称并明确函数被调用时该做些什么。**调用**
+函数才会以给定的参数真正执行这些动作。例如，一旦你定义了函数`square`，你可以如下这样调用它：
 
 ```javascript
 square(5);
@@ -131,10 +133,12 @@ Copy to Clipboard
 
 其中`i`是参数的序数编号（译注：数组索引），以0开始。所以第一个传来的参数会是`arguments[0]`。参数的数量由`arguments.length`表示。
 
-使用arguments对象，你可以处理比声明的更多的参数来调用函数。这在你事先不知道会需要将多少参数传递给函数时十分有用。你可以用`arguments.length`来获得实际传递给函数的参数的数量，然后用`arguments`
+使用arguments对象，你可以处理比声明的更多的参数来调用函数。这在你事先不知道会需要将多少参数传递给函数时十分有用。你可以用`arguments.length`
+来获得实际传递给函数的参数的数量，然后用`arguments`
 对象来取得每个参数。
 
-> `arguments`变量只是 ”**类数组对象**“，并不是一个数组。称其为类数组对象是说它有一个索引编号和`length`属性。尽管如此，它并不拥有全部的Array对象的操作方法。
+> `arguments`变量只是 ”**类数组对象**“，并不是一个数组。称其为类数组对象是说它有一个索引编号和`length`
+> 属性。尽管如此，它并不拥有全部的Array对象的操作方法。
 
 ## 函数参数
 
@@ -167,7 +171,8 @@ console.log(arr); // [2, 4, 6]
 
 ## 箭头函数
 
-箭头函数表达式的语法比函数表达式更简洁，并且没有自己的`this`，`arguments`，`super`或`new.target`。 箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
+箭头函数表达式的语法比函数表达式更简洁，并且没有自己的`this`，`arguments`，`super`或`new.target`。
+箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
 
 引入箭头函数有两个方面的作用：更简短的函数并且不绑定`this`。
 
@@ -213,7 +218,8 @@ let sum = (a, b) => {
 ## `this`
 
 this指的是函数运行时所在的“环境”。
-在绝大多数情况下，函数的调用方式决定了 `this` 的值（运行时绑定）。`this` 不能在执行期间被赋值，并且在每次函数被调用时 `this` 的值也可能会不同。ES5 引入了 `bind` 方法来设置函数的 `this`
+在绝大多数情况下，函数的调用方式决定了 `this` 的值（运行时绑定）。`this` 不能在执行期间被赋值，并且在每次函数被调用时 `this`
+的值也可能会不同。ES5 引入了 `bind` 方法来设置函数的 `this`
 值，而不用考虑函数如何被调用的。ES2015 引入了箭头函数，箭头函数不提供自身的 this 绑定（`this` 的值将保持为闭合词法上下文的值）。
 
 **根据函数的调用方式不同，`this`的值也不同**
@@ -253,13 +259,12 @@ this指的是函数运行时所在的“环境”。
 必须有结束条件，没有结束条件就变成死循环
 :::
 
-
 ```javascript
-function sun(n){
-    if(n === 1){ // 结束条件
+function sun(n) {
+    if (n === 1) { // 结束条件
         return 1
-    }else {
-        return n + sum(n-1)
+    } else {
+        return n + sum(n - 1)
     }
 }
 ```
@@ -267,12 +272,12 @@ function sun(n){
 **数组扁平化**：把多维数组变成一维数组
 
 ```javascript
-function fn(arr){
+function fn(arr) {
     let result = []
-    for(let i = 0; i < arr.length; i++){
-        if(typeof arr[i] === 'object'){
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'object') {
             result = result.concat(fn(arr[i]))
-        }else {
+        } else {
             result.push(arr[i])
         }
     }
@@ -283,8 +288,8 @@ function fn(arr){
 **斐波那契数列**：`1 1 2 3 5 8 13 21 34 55 ...`
 
 ```javascript
-function fn(n){
-    if(n < 3){
+function fn(n) {
+    if (n < 3) {
         return 1
     }
     return fn(n - 1) + fn(n - 2)
