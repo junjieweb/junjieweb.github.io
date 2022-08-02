@@ -6,7 +6,8 @@ sidebar_position: 3
 
 **JavaScript**的 `Array` 对象是用于构造数组的全局对象，数组是类似于列表的高阶对象。
 
-数组是一种类列表对象，它的原型中提供了遍历和修改元素的相关操作。JavaScript 数组的长度和元素类型都是非固定的。因为数组的长度可随时改变，并且其数据在内存中也可以不连续，所以 JavaScript
+数组是一种类列表对象，它的原型中提供了遍历和修改元素的相关操作。JavaScript
+数组的长度和元素类型都是非固定的。因为数组的长度可随时改变，并且其数据在内存中也可以不连续，所以 JavaScript
 数组不一定是密集型的，这取决于它的使用方式。
 
 JavaScript 数组的索引是从0开始的，第一个元素的索引为0，最后一个元素的索引等于该数组的 `length` 减1。
@@ -32,7 +33,8 @@ JavaScript 数组的索引是从0开始的，第一个元素的索引为0，最�
 ## 实例属性
 
 1. `Array.prototype.length` 数组中的元素个数，实际值是数组的最大索引+1，`length`的值可以修改。
-2. `Array.prototype[@@unscopables]` 包含了所有 ES2015 (ES6) 中新定义的、且并未被更早的 ECMAScript 标准收纳的属性名。这些属性被排除在由 with 语句绑定的环境中
+2. `Array.prototype[@@unscopables]` 包含了所有 ES2015 (ES6) 中新定义的、且并未被更早的 ECMAScript 标准收纳的属性名。这些属性被排除在由
+   with 语句绑定的环境中
 
 ## 实例方法
 
@@ -61,7 +63,9 @@ JavaScript 数组的索引是从0开始的，第一个元素的索引为0，最�
 23. `Array.prototype.some()` 测试数组中是不是至少有一个元素通过了被提供的函数测试
 24. `Array.prototype.sort()` 对数组元素进行原地排序并返回此数组，默认按照`Unicode`编码进行排序,可以通过回调函数来指定排序规则
 25. `Array.prototype.splice()` 通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容
-26. `Array.prototype.toLocaleString()` 返回一个字符串表示数组中的元素。数组中的元素将使用各自的 `Object.prototype.toLocaleString()` 方法转成字符串
-27. `Array.prototype.toString()` 返回一个字符串表示指定的数组及其元素。数组中的元素将使用各自的 `Object.prototype.toString()` 方法转成字符串
+26. `Array.prototype.toLocaleString()`
+    返回一个字符串表示数组中的元素。数组中的元素将使用各自的 `Object.prototype.toLocaleString()` 方法转成字符串
+27. `Array.prototype.toString()`
+    返回一个字符串表示指定的数组及其元素。数组中的元素将使用各自的 `Object.prototype.toString()` 方法转成字符串
 28. `Array.prototype.unshift()` 将一个或多个元素添加到数组的头部，并返回该数组的新长度
 29. `Array.prototype.values()` 返回一个新的 `Array Iterator` 对象，该对象包含数组每个索引的值
