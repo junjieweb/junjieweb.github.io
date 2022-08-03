@@ -19,7 +19,8 @@ tags: [ hello, docusaurus]
 
 :::
 <!--truncate-->
-[Docusaurus 博客功能](https://docusaurus.io/docs/blog) 由 [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog)提供支持.
+[Docusaurus 博客功能](https://docusaurus.io/docs/blog)
+由 [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog)提供支持.
 
 只需将 Markdown 文件（或文件夹）添加到 `blog` 目录。
 
