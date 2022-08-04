@@ -5,7 +5,8 @@ title: MDN 学习路线
 :::tip
 欢迎来到我们的 Web 前端开发者学习路线图！
 
-在这里我们会提供一个结构化的课程，教会你成为一名 Web 前端开发所需要了解的一切。通过学习每个章节，学到新技能（或者提升原有技能），就是这么简单。在每个章节，你将需要做练习并通过评估以确保你掌握了之后才能继续往后学习。
+在这里我们会提供一个结构化的课程，教会你成为一名 Web
+前端开发所需要了解的一切。通过学习每个章节，学到新技能（或者提升原有技能），就是这么简单。在每个章节，你将需要做练习并通过评估以确保你掌握了之后才能继续往后学习。
 :::
 
 <!--truncate-->
@@ -21,7 +22,8 @@ title: MDN 学习路线
 - JavaScript, 用来为网站创建动态功能的脚本语言
 - 一些有助于现代化客户端 Web 开发的工具
 
-这些章节是按照学习顺序而进行设计的，但是每个又相对独立。比如，如果你已经对 HTML 非常熟悉了，你大可放心地跳过这个章节直接学习 CSS。
+这些章节是按照学习顺序而进行设计的，但是每个又相对独立。比如，如果你已经对 HTML 非常熟悉了，你大可放心地跳过这个章节直接学习
+CSS。
 
 ## 预备知识
 
@@ -36,7 +38,8 @@ title: MDN 学习路线
 我们尽量让 Web 前端开发学习尽可能的轻松一点，但是你仍然可能因为一些难以理解的点而被迫止步不前，或者某段代码就是不能像理解中的那样工作。
 
 无论是新手还是富有经验的开发者，我们常常会被卡住，但是不要慌。“[如何学习](https://developer.mozilla.org//docs/learn/Learning_and_getting_help)
-”这个章节会给你一些关于如何查找信息和自行解决问题的有用的提示，如果仍然不行，大胆的在 [讨论区](https://discourse.mozilla.org/c/mdn/learn/) 提出你的问题。
+”这个章节会给你一些关于如何查找信息和自行解决问题的有用的提示，如果仍然不行，大胆的在 [讨论区](https://discourse.mozilla.org/c/mdn/learn/)
+提出你的问题。
 
 让我们开始吧，祝你好运！
 
@@ -56,7 +59,8 @@ title: MDN 学习路线
 
 #### 核心提示
 
-- [安装基础软件](https://developer.mozilla.org//docs/Learn/Getting_started_with_the_web/Installing_basic_software) (15 分钟)
+- [安装基础软件](https://developer.mozilla.org//docs/Learn/Getting_started_with_the_web/Installing_basic_software) (15
+  分钟)
 - [Web 和 Web 标准的背景介绍](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards) (
   45 分钟)
 - [学习和获得帮助](https://developer.mozilla.org/zh-CN/docs/Learn/Learning_and_getting_help) (45 分钟)
@@ -85,7 +89,8 @@ title: MDN 学习路线
 
 #### 预备知识
 
-学习 CSS 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 再开始。
+学习 CSS 前需要有基础的 HTML
+知识，请至少学习完 [HTML 介绍](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML) 再开始。
 
 #### 我怎么知道自己是否可以继续往下学习了?
 
@@ -108,7 +113,8 @@ title: MDN 学习路线
 
 #### 预备知识
 
-学习 JavaScript 前需要有基础的 HTML 知识，请至少学习完 [HTML 介绍](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
+学习 JavaScript 前需要有基础的 HTML
+知识，请至少学习完 [HTML 介绍](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
 再开始。
 
 #### 我怎么知道自己是否可以继续往下学习了?
@@ -153,7 +159,8 @@ title: MDN 学习路线
 
 #### 核心模块
 
-- [跨浏览器测试](https://developer.mozilla.org//docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30 小时阅读/练习)
+- [跨浏览器测试](https://developer.mozilla.org//docs/Learn/Tools_and_testing/Cross_browser_testing) (25–30
+  小时阅读/练习)
 - [可访问性（or 辅助功能）](https://developer.mozilla.org//docs/learn/Accessibility) (20–25 小时阅读/练习)
 
 ### 现代工具
