@@ -35,12 +35,12 @@ import React from 'react';
 import Layout from '@theme/Layout';
 
 export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
+    return (
+        <Layout>
+            <h1>My React page</h1>
+            <p>This is a React page</p>
+        </Layout>
+    );
 }
 ```
 
@@ -130,14 +130,14 @@ This is my **first Docusaurus document**!
 
 ```js title="sidebars.js"
 module.exports = {
-  tutorialSidebar: [
-    {
-      type: 'category',
-      label: 'Tutorial',
-      // highlight-next-line
-      items: ['hello'],
-    },
-  ],
+    tutorialSidebar: [
+        {
+            type: 'category',
+            label: 'Tutorial',
+            // highlight-next-line
+            items: ['hello'],
+        },
+    ],
 };
 ```
 
@@ -151,10 +151,10 @@ module.exports = {
 
 ```js title="docusaurus.config.js"
 module.exports = {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en', 'fr'],
+    },
 };
 ```
 
@@ -180,7 +180,6 @@ npm run start -- --locale fr
 
 您可以通过 `http://localhost:3000/fr/` 访问您的本地化站点，并且会翻译 `Getting Started` 页面。
 
-
 :::caution 警告
 
 在开发中，您一次只能使用一种语言环境。
@@ -195,20 +194,19 @@ Modify the `docusaurus.config.js` file:
 
 ```js title="docusaurus.config.js"
 module.exports = {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
+    themeConfig: {
+        navbar: {
+            items: [
+                // highlight-start
+                {
+                    type: 'localeDropdown',
+                },
+                // highlight-end
+            ],
         },
-        // highlight-end
-      ],
     },
-  },
 };
 ```
-
 
 ### 建立您的本地化网站
 
@@ -251,22 +249,21 @@ The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json
 
 ```js title="docusaurus.config.js"
 module.exports = {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'docsVersionDropdown',
+    themeConfig: {
+        navbar: {
+            items: [
+                // highlight-start
+                {
+                    type: 'docsVersionDropdown',
+                },
+                // highlight-end
+            ],
         },
-        // highlight-end
-      ],
     },
-  },
 };
 ```
 
 文档版本下拉菜单出现在您的导航栏中：
-
 
 ### 更新现有版本
 
@@ -301,12 +298,13 @@ npm run serve
 
 The `build` folder is now served at `http://localhost:3000/`.
 
-You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
-
+You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read
+the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
 
 ## Markdown 功能
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
+Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional
+features**.
 
 ### Front Matter
 
@@ -327,7 +325,6 @@ slug: /my-custom-url
 Markdown text with [links](./hello.md)
 ```
 
-
 ### 代码块
 
 语法高亮支持 Markdown 代码块。
@@ -342,7 +339,7 @@ Markdown text with [links](./hello.md)
 
 ```jsx title="src/components/HelloDocusaurus.js"
 function HelloDocusaurus() {
-  return <h1>Hello, Docusaurus!</h1>;
+    return <h1>Hello, Docusaurus!</h1>;
 }
 ```
 
