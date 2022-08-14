@@ -186,11 +186,11 @@ const config = {
                 theme: lightCodeTheme,
                 darkTheme: darkCodeTheme,
             },
-            algolia: {
-                appId: 'MYKAGV35SZ',
-                apiKey: '727eef9f177f54a59723c0faf0bdddd5',
-                indexName: 'junjieweb',
-            },
+            // algolia: {
+            //     appId: 'MYKAGV35SZ',
+            //     apiKey: '727eef9f177f54a59723c0faf0bdddd5',
+            //     indexName: 'junjieweb',
+            // },
         }),
 };
 
